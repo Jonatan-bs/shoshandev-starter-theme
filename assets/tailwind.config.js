@@ -2,12 +2,14 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   darkMode: false,
-  purge: [
+  purge: {
+    content: [
     // Paths to your templates...
-    "../**.php",
-    "../**/**.php",
-    "./src/js/**.js"
-    ],
+      "../**.php",
+      "../**/**.php",
+      "./**/**.php",
+    ]
+  },
   theme: {
     screens: {
       sm: '620px',

@@ -1,8 +1,0 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-
-@import "custom.css";
-@import "block-editor.css";
-
-body{ @apply bg-red-900 }

@@ -6,7 +6,7 @@
 function enqueue_scripts()  { 
 
 	wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/assets/build/css/main.css');
-    wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/build/js/main.js', array(), 1.0, true );
+    // wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/build/js/main.js', array(), 1.0, true );
   
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
@@ -50,11 +50,9 @@ add_action( 'after_setup_theme', 'shoshandevstartertheme_custom_logo_setup' );
  */
 
 function gutenberg_setup(){
-    
     add_theme_support("align-wide");
     add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
-	add_editor_style( 'assets/gutenberg/index.css' );
-    
+	add_editor_style( 'assets/build/css/gutenberg.css' );
 }
 
 add_action( 'after_setup_theme', 'gutenberg_setup' );
