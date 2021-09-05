@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   darkMode: false,
   purge: [
@@ -9,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: 'red'
+        primary: colors.red
       },
     }
   },
