@@ -31,4 +31,21 @@ register_nav_menus(
 	)
 );
 
+/**
+ * Add logo custom support
+ */
+
+function shoshandevstartertheme_custom_logo_setup() {
+    $defaults = array(
+        'height'               => 100,
+        'width'                => 150,
+        'flex-height'          => false,
+        'flex-width'           => false,
+        'header-text'          => array( 'site-title', 'site-description' ),
+        'unlink-homepage-logo' => false, 
+    );
+ 
+    add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'shoshandevstartertheme_custom_logo_setup' );
 

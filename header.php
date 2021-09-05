@@ -24,15 +24,22 @@
 <body <?php body_class(); ?>>
 
 <header>
-	<div class="container bg-black text-white mx-auto">
+	<div class="bg-black text-white">
 
-		<div>
-			<h1>
-				<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Display the blog name ?></a>
+		<div class="container mx-auto py-5">
+			<h1 class="flex items-center">
+				<div class="w-16">	
+					<?php 
+					the_custom_logo(); 
+					?>
+				</div>
+				<div class="site-title ml-5">
+					
+					<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
+						<?php bloginfo( 'name' );?>
+					</a>
+				</div>
 			</h1>
-			<h4>
-				<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>
-			</h4>
 		</div>
 		
 	</div>
