@@ -9,6 +9,12 @@ module.exports = {
     "./src/js/**.js"
     ],
   theme: {
+    screens: {
+      sm: '620px',
+      md: '768px',
+      lg: '976px',
+      xl: '1300px',
+    },
     extend: {
       colors: {
         primary: colors.red
