@@ -23,10 +23,10 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-	<div class="bg-black text-white">
+<header class="bg-black text-white">
+	<div  class="container mx-auto py-5 flex justify-between items-center">
 
-		<div class="container mx-auto py-5">
+		<div>
 			<h1 class="flex items-center">
 				<div class="w-16">	
 					<?php 
@@ -42,8 +42,7 @@
 			</h1>
 		</div>
 		
-	</div>
-	<div>
+
 	
 		<nav>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>

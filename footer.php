@@ -7,7 +7,7 @@
 
 </main><!-- / end page container, begun in the header -->
 
-<footer>
+<footer class="bg-black h-32">
 		
 		<p>Footer</p>
 		
