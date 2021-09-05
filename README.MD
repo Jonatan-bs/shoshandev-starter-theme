@@ -9,5 +9,8 @@ Run in terminal:
 ## Use
 
 Run in terminal from assets folder:
-* yarn dev (For development)
+* yarn watch (For development)
 * yarn build (For production)
+
+Obs.: run yarn build for gutenberg css changes
+
