@@ -5,6 +5,7 @@ A bare wordpress theme with Scss and Tailwind
 Run in terminal:
 * cd assets
 * yarn install
+* search and replace 'shoshandevstartertheme' with unique text domain
 
 ## Use
 
