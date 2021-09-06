@@ -9,5 +9,8 @@
     };
     &>.alignwide{
         @apply container mx-auto xl:max-w-screen-xl
+    };
+    &>*{
+        @apply mb-5
     }
 }

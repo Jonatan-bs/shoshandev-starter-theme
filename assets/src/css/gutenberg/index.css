@@ -4,8 +4,6 @@
 @import "tailwindcss/utilities";
 
 
-body{ background: red }
-
 .wp-block{
     @apply container mx-auto lg:max-w-screen-lg;
 }

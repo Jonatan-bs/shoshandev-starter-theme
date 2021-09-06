@@ -17,8 +17,9 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				?>
 
 					<article class="post">
-					
-						<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
+						<div class="container">
+							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
+						</div>
 						
 						<div class="gutenberg-content">
 							<?php the_content(); 
