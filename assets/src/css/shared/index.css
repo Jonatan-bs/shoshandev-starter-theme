@@ -2,18 +2,19 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    @apply text-2xl;
+}
+
+h2 {
+    @apply text-xl;
+}
+
+h3 {
+    @apply text-lg;
+}
+/* 
 .entry-content, .block-editor-block-list__layout {
-    h1 {
-        @apply text-2xl;
-    }
-
-    h2 {
-        @apply text-xl;
-    }
-
-    h3 {
-        @apply text-lg;
-    }
 
     p, ul, ol {
         a {
@@ -38,4 +39,4 @@ body{
             @apply list-decimal list-inside;
         }
     }
-}
+} */
