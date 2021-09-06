@@ -7,6 +7,7 @@ Run in terminal:
 * yarn install
 * search and replace 'shoshandevstartertheme' with unique text domain
 * search and replace 'sst_' with unique prefix
+* Setup Advanced Custom Fields PRO plugin
 
 ## Use
 

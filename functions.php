@@ -56,3 +56,9 @@ function gutenberg_setup(){
 }
 
 add_action( 'after_setup_theme', 'gutenberg_setup' );
+
+/**
+ * setup TGMPA for requiring plugins to theme
+ */
+
+require_once(get_template_directory() . '/includes/tgmpa/tgmpa-configuration.php');
