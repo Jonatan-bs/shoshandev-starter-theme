@@ -4,7 +4,8 @@
 	"description": "",
 	"license": "UNLICENSED",
 	"scripts": {
-		"watch": "npx postcss src/css/frontend/index.css -o build/css/main.css --watch",
+		"watch:frontend": "npx postcss src/css/frontend/index.css -o build/css/main.css --watch",
+		"watch:gutenberg": "npx postcss src/css/gutenberg/index.css -o build/css/gutenberg.css --watch",
 		"build": "NODE_ENV=production npx postcss src/css/frontend/index.css -o build/css/main.css --minify && NODE_ENV=production npx postcss src/css/gutenberg/index.css -o build/css/gutenberg.css --minify"
 	},
 	"devDependencies": {
