@@ -1,19 +1,25 @@
-@import "./blocks/sst-mycustomblock.css";
+@import "tailwindcss/base";
 
-body{
-    font-family: 'Roboto', sans-serif;
-}
+@layer base {
+    body{
+        font-family: 'Roboto', sans-serif;
+    }
 
-h1 {
-    @apply text-2xl;
-}
+    .title, .editor-post-title__input {
+        @apply text-6xl font-bold mb-4 pb-0;
+    }
 
-h2 {
-    @apply text-xl;
-}
+    h1,.h1 {
+        @apply text-2xl font-bold;
+    }
 
-h3 {
-    @apply text-lg;
+    h2,.h2 {
+        @apply text-xl font-bold;
+    }
+
+    h3,.h3 {
+        @apply text-lg font-bold;
+    }
 }
 /* 
 .entry-content, .block-editor-block-list__layout {

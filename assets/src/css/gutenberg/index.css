@@ -1,5 +1,4 @@
 @import "../shared/index.css";
-@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
@@ -15,3 +14,4 @@
 .wp-block[data-align=full] {
     @apply max-w-full;
 }
+

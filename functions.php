@@ -79,3 +79,18 @@ add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
  * Add Gutenberg Blocks
  */
 require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php');
+
+/**
+ * Add Gutenberg Blocks
+ */
+add_filter( 'render_block', 'wrap_table_block', 10, 2 );
+function wrap_table_block( $block_content, $block ) {
+
+    $alignClass = $block['attrs']['align'] ? ' align' . $block['attrs']['align'] : '';
+
+
+    $block_content = '<div class="blockWrapper'. $alignClass .'">' . $block_content . '</div>';
+  
+
+  return $block_content;
+}

@@ -1,16 +1,20 @@
 @import '../shared/index.css';
-@import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 .gutenberg-content{
-    &>*:not(.alignfull):not(.alignwide){
-        @apply container mx-auto lg:max-w-screen-lg
+
+    &>.blockWrapper{
+        @apply container mb-5 mx-auto
     };
-    &>.alignwide{
-        @apply container mx-auto xl:max-w-screen-xl
+    &>.blockWrapper:not(.alignfull):not(.alignwide){
+        @apply lg:max-w-screen-lg
     };
-    &>*{
-        @apply mb-5
-    }
+    &>.blockWrapper.alignwide{
+        @apply xl:max-w-screen-xl
+    };
+    &>.blockWrapper.alignfull{
+        @apply max-w-full px-0
+    };
+
 }

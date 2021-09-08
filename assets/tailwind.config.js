@@ -16,6 +16,11 @@ module.exports = {
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
     },
+    container: {
+      padding: {
+        DEFAULT: '1rem',
+      },
+    },
     screens: {
       sm: '620px',
       md: '768px',

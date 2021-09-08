@@ -17,10 +17,10 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				?>
 
 					<article class="post">
-						<div class="container">
+						<div class="container mx-auto lg:max-w-screen-lg">
 							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
 						</div>
-						
+						<div>
 						<div class="gutenberg-content">
 							<?php the_content(); 
 							// This call the main content of the page, the stuff in the main text box while composing.
@@ -29,6 +29,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 							
 							<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
 						</div><!-- the-content -->
+						</div>
 						
 					</article>
 
