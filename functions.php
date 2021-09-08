@@ -57,3 +57,20 @@ function gutenberg_setup(){
 
 add_action( 'after_setup_theme', 'gutenberg_setup' );
 
+/**
+ * Custom block category
+ */
+
+function sst_block_categories( $categories ) {
+    return array_merge(
+        array(
+            array(
+                'slug' => 'sst', // The slug of our new category
+                'title' => __( 'Shoshan Dev', 'shoshandevstartertheme' ), // The name of our new category
+            ),
+        ),
+        $categories
+    );
+}
+
+add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
