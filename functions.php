@@ -58,7 +58,7 @@ function gutenberg_setup(){
 add_action( 'after_setup_theme', 'gutenberg_setup' );
 
 /**
- * Custom block category
+ * Add Custom block category
  */
 
 function sst_block_categories( $categories ) {
@@ -74,3 +74,8 @@ function sst_block_categories( $categories ) {
 }
 
 add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
+
+/**
+ * Add Gutenberg Blocks
+ */
+require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php');

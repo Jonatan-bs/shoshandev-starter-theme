@@ -1,0 +1,21 @@
+{
+	"apiVersion": 2,
+	"name": "sst/mycustomblock",
+	"version": "0.1.0",
+	"title": "Mycustomblock",
+	"category": "sst",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false
+	},
+	"attributes":{
+		"backgroundColor": {
+			"type": "string",
+			"default": "red"
+		}
+	},
+	"textdomain": "mycustomblock",
+	"editorScript": "file:./build/index.js",
+	"editorStyle": "file:./build/index.css",
+	"style": "file:./build/style-index.css"
+}

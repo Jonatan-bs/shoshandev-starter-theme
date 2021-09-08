@@ -2,15 +2,20 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   darkMode: false,
+
   purge: {
     content: [
     // Paths to your templates...
       "../**.php",
       "../**/**.php",
+      "../**/**/**.php",
       "./**/**.php",
     ]
   },
   theme: {
+    fontFamily: {
+      'sans': ['Roboto', 'sans-serif'],
+    },
     screens: {
       sm: '620px',
       md: '768px',
