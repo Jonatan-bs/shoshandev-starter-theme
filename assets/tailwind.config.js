@@ -17,6 +17,7 @@ module.exports = {
       'sans': ['Roboto', 'sans-serif'],
     },
     container: {
+      center: true,
       padding: {
         DEFAULT: '1rem',
       },

@@ -17,7 +17,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				?>
 
 					<article class="post">
-						<div class="container mx-auto lg:max-w-screen-lg">
+						<div class="container lg:max-w-screen-lg">
 							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
 						</div>
 						<div>

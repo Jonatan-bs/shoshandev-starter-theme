@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 
 <header class="bg-black text-white mb-16">
-	<div  class="container mx-auto py-5 flex justify-between items-center">
+	<div  class="container py-5 flex justify-between items-center">
 
 		<div>
 			<h1 class="flex items-center text-2xl">

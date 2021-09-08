@@ -5,16 +5,32 @@
 .gutenberg-content{
 
     &>.blockWrapper{
-        @apply container mb-5 mx-auto
+        @apply container mb-5;
     };
     &>.blockWrapper:not(.alignfull):not(.alignwide){
-        @apply lg:max-w-screen-lg
+        @apply lg:max-w-screen-lg;
     };
     &>.blockWrapper.alignwide{
-        @apply xl:max-w-screen-xl
+        @apply xl:max-w-screen-xl;
     };
     &>.blockWrapper.alignfull{
-        @apply max-w-full px-0
+        @apply max-w-full px-0;
     };
 
+};
+
+@layer base{
+    html, body {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    main {
+        flex: 1 0 auto;
+    }
+    footer {
+        flex-shrink: 0;
+    }
 }
