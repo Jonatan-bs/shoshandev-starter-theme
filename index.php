@@ -6,11 +6,9 @@
  */
 
 get_header(); // This fxn gets the header.php file and renders it ?>
-	<div>
-		<div id="content" role="main">
-			<?php 
-				get_template_part('partials/articles');
-			?>
-		</div><!-- #content .site-content -->
-	</div><!-- #primary .content-area -->
+	<div class="container" role="main">
+		<?php 
+			get_template_part('partials/articles');
+		?>
+	</div>
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
