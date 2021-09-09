@@ -16,12 +16,12 @@ module.exports = {
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
     },
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-      },
-    },
+    // container: {
+    //   center: true,
+    //   padding: {
+    //     DEFAULT: '1rem',
+    //   },
+    // },
     screens: {
       sm: '620px',
       md: '768px',
@@ -44,6 +44,31 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: [],
+  plugins: [
+    // function (a) {
+    //   let {addComponents, theme} = a
+    //   console.log(theme())
+    //   addComponents({
+    //     '.container': {
+    //       maxWidth: '100%',
+    //       '@screen sm': {
+    //         maxWidth: '600px',
+    //       },
+    //       '@screen md': {
+    //         maxWidth: '700px',
+    //       },
+    //       '@screen lg': {
+    //         maxWidth: '800px',
+    //       },
+    //       '@screen xl': {
+    //         maxWidth: '900px',
+    //       },
+    //     }
+    //   })
+    // }
+  ],
+  corePlugins: {
+   container: false,
+  }
 }
 

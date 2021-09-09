@@ -28,7 +28,7 @@
         @apply xl:max-w-screen-xl;
     }
     &>.align-wrap-full{
-        @apply max-w-full px-0 mx-0;
+        @apply max-w-full px-0 mx-0 w-full;
     } 
     
 } 
