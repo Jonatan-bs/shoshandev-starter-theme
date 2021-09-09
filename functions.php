@@ -130,3 +130,26 @@ function sst_menu_add_class( $attrs, $item, $args ) {
     return $attrs;
 }
 add_filter( 'nav_menu_link_attributes', 'sst_menu_add_class', 10, 3 );
+
+/**
+ * Remove blocks
+ */ 
+function sst_allowed_block_types( $allowed_blocks, $post ) {
+ 
+	// $allowed_blocks = array(
+	// 	'sst/mycustomblock',
+	// 	'core/columns',
+	// 	'core/image',
+	// 	'core/paragraph',
+	// 	'core/heading',
+	// 	'core/list'
+	// );
+ 
+	// if( $post->post_type === 'page' ) {
+	// 	$allowed_blocks[] = 'core/shortcode';
+	// }
+ 
+	return $allowed_blocks;
+ 
+}
+add_filter( 'allowed_block_types', 'sst_allowed_block_types', 10, 2 );

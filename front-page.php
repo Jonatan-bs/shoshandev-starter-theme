@@ -1,6 +1,6 @@
 <?php
 get_header(); // This fxn gets the header.php file and renders it ?>
-	<div class="container" role="main">
+	<div role="main">
 
 		<?php 
 			if( have_posts()){

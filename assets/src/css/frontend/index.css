@@ -36,6 +36,10 @@
     
 } 
 
+.wp-block-gallery>* {
+    width: 100%;
+}
+
 /* .gutenberg-content > .alignfull {
 	width: calc(100% + 2 * 1.5rem);
 	max-width: none;
