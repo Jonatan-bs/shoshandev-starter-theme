@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "settings": {
+        "typography": {
+			"fontSizes": [
+				{
+					"slug": "Default",
+					"size": "1.123rem",
+					"name": "Default"
+				},
+				{
+					"slug": "sm",
+					"size": "1.123rem",
+					"name": "sm"
+				}
+			]
+		}
+    }
+}

@@ -2,8 +2,18 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.gutenberg-content{
-
+.gutenberg-content, .wp-site-blocks{
+    ul{
+        li{
+            @apply list-disc list-inside;
+        }
+    }
+    ol{
+        li{
+            @apply list-decimal list-inside;
+        }
+    }
+    
     &>.blockWrapper{
         @apply container mb-5;
 

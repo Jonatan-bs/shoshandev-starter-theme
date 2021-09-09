@@ -4,6 +4,7 @@
 
 
 .wp-block{
+    box-sizing: border-box;
     @apply container lg:max-w-screen-lg;
 }
 
@@ -18,5 +19,19 @@
 .is-root-container{
     &>*{
         @apply mb-5;
+    }
+}
+
+li{
+    @apply leading-normal
+}
+ul{
+    li{
+        @apply list-disc list-inside;
+    }
+}
+ol{
+    li{
+        @apply list-decimal list-inside;
     }
 }

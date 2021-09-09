@@ -45,7 +45,7 @@
 
 	
 		<nav>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex gap-5' ) ); // Display the user-defined menu in Appearance > Menus ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex gap-5', 'add_anchor_class'  => 'text-white' ) ); // Display the user-defined menu in Appearance > Menus ?>
 		</nav><!-- .site-navigation .main-navigation -->
 	</div>
 		
