@@ -20,8 +20,11 @@
     &>*{
         @apply container mb-5;
     }    
-    &>*:not(.align-wrap){
+    &:not(.wide)>*:not(.align-wrap){
         @apply lg:max-w-screen-lg;
+    }
+    &.wide>*:not(.align-wrap){
+        @apply xl:max-w-screen-xl;
     }
     
     &>.align-wrap-wide{

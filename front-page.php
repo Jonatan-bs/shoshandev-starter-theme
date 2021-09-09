@@ -6,7 +6,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 			if( have_posts()){
 				while(have_posts()){
 					the_post();
-					get_template_part( "template-parts/content", "page");
+					get_template_part( "template-parts/content", "page-wide");
 
 				}
 			}
