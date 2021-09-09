@@ -2,33 +2,25 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-.gutenberg-content, .wp-site-blocks{
-    ul{
-        li{
-            @apply list-disc list-inside;
-        }
-    }
-    ol{
-        li{
-            @apply list-decimal list-inside;
-        }
-    }
-    
-    &>.blockWrapper{
-        @apply container mb-5;
-
-    }    
-    &>.blockWrapper:not(.alignfull):not(.alignwide){
-        @apply lg:max-w-screen-lg;
-    }
-    &>.blockWrapper.alignwide{
-        @apply xl:max-w-screen-xl;
-    }
-    &>.blockWrapper.alignfull{
-        @apply max-w-full px-0;
-    }
-    
+/* .gutenberg-content > .alignfull {
+	width: calc(100% + 2 * 1.5rem);
+	max-width: none;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
 }
+.gutenberg-content > .align-wrap {
+	width: calc(100% + 2 * 1.5rem);
+	max-width: none;
+	margin-left: -1.5rem;
+	margin-right: -1.5rem;
+}
+
+.align-wrap .alignfull {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+} */
+
 
 @layer base{
     html, body {

@@ -7,7 +7,7 @@
     box-sizing: border-box;
     @apply container lg:max-w-screen-lg;
 }
-
+/*
 .wp-block[data-align=wide] {
     @apply container xl:max-w-screen-xl;
 }
@@ -20,10 +20,10 @@
     &>*{
         @apply mb-5;
     }
-}
+} */
 
 li{
-    @apply leading-normal
+    @apply leading-normal;
 }
 ul{
     li{

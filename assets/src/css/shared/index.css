@@ -1,5 +1,35 @@
 @import "tailwindcss/base";
 
+.gutenberg-content, .wp-site-blocks,.block-editor-block-list__layout.is-root-container,.edit-post-visual-editor__post-title-wrapper {
+    ul{
+        li{
+            @apply list-disc list-inside;
+        }
+    }
+    ol{
+        li{
+            @apply list-decimal list-inside;
+        }
+    }
+
+
+
+    &>*{
+        @apply container mb-5;
+    }    
+    &>*:not(.align-wrap):not(.wp-block[data-align=full]):not(.wp-block[data-align=wide]){
+        @apply lg:max-w-screen-lg;
+    }
+    
+    &>.align-wrap-wide,&&>.wp-block[data-align=wide]{
+        @apply xl:max-w-screen-xl;
+    }
+    &>.align-wrap-full,&&>.wp-block[data-align=full]{
+        @apply max-w-full px-0 mx-0;
+    } 
+    
+}
+
 @layer base {
     body{
         font-family: 'Roboto', sans-serif;
@@ -22,6 +52,13 @@
     }
     a{
         @apply text-primary
+    }
+    .wp-block-group.has-background{
+        @apply py-4 px-0;
+
+        /* &>*{
+            @apply px-0
+        } */
     }
 }
 
