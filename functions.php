@@ -16,15 +16,25 @@ add_action( 'wp_enqueue_scripts', 'enqueue_scripts' ); // Register this fxn and 
 */
 if ( ! isset( $content_width ) ) $content_width = 900;
 
+
+
 /**
- * Add post thumbnail/featured image support
-*/
-add_theme_support( 'post-thumbnails' );
-register_nav_menus( 
-	array(
-		'primary'	=>	__( 'Header', 'shoshandevstartertheme'), // Register the Primary menu
-	)
-);
+ * Add theme support
+ */
+function shoshandevstartertheme_theme_support() {
+    add_theme_support( 'title-tag' ); 
+
+    /**
+     * Add post thumbnail/featured image support
+    */
+    add_theme_support( 'post-thumbnails' );
+    register_nav_menus( 
+        array(
+            'primary'	=>	__( 'Header', 'shoshandevstartertheme'), // Register the Primary menu
+        )
+    );
+}
+add_action( 'after_setup_theme', 'shoshandevstartertheme_theme_support' );
 
 /**
  * Add logo custom support
@@ -86,11 +96,29 @@ require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php
 add_filter( 'render_block', 'wrap_table_block', 10, 2 );
 function wrap_table_block( $block_content, $block ) {
 
+    if($block['blockName'] === "core/column") return $block_content;
+
     $alignClass = $block['attrs']['align'] ? ' align' . $block['attrs']['align'] : '';
 
+    // $block['innerHTML'] = "";
+    // $block['innerContent'] = "";
+    // echo "<pre>";
+    // var_dump($block);
+    // echo "</pre>";
 
     $block_content = '<div class="blockWrapper'. $alignClass .'">' . $block_content . '</div>';
   
 
-  return $block_content;
+    return $block_content;
 }
+
+/**
+ * Register sidebar
+ */
+if ( function_exists('register_sidebar') )
+    register_sidebar(array(
+        'name' => 'frontpage',
+        'before_widget' => '<div class="widgetizedArea">',
+        'after_widget' => '</div>',
+    )
+);

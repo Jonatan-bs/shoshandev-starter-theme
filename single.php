@@ -26,10 +26,8 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						</div><!--/post-meta -->
 						
 						<div class="the-content">
-							<?php the_content(); 
-							// This call the main content of the post, the stuff in the main text box while composing.
-							// This will wrap everything in p tags
-							?>
+							<?php get_template_part( "template-parts/content", "page") ?>
+
 							
 							<?php wp_link_pages(); // This will display pagination links, if applicable to the post ?>
 						</div><!-- the-content -->
@@ -45,18 +43,13 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				
 				<?php
 					// If comments are open or we have at least one comment, load up the default comment template provided by Wordpress
-					if ( comments_open() || '0' != get_comments_number() )
-						comments_template( '', true );
+					if ( comments_open()){
+						comments_template();
+					}
 				?>
 
 
-			<?php else : // Well, if there are no posts to display and loop through, let's apologize to the reader (also your 404 error) ?>
-				
-				<article class="post error">
-					<h1 class="404">Nothing has been posted like that yet</h1>
-				</article>
-
-			<?php endif; // OK, I think that takes care of both scenarios (having a post or not having a post to show) ?>
+			<?php else : endif;?>
 
 		</div><!-- #content .site-content -->
 	</div><!-- #primary .content-area -->
