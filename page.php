@@ -3,7 +3,6 @@
  * The template for displaying any single page.
  *
  */
-
 get_header(); // This fxn gets the header.php file and renders it ?>
 	<div id="primary">
 		<div id="content" role="main">

@@ -61,7 +61,7 @@ add_action( 'after_setup_theme', 'shoshandevstartertheme_custom_logo_setup' );
 
 function gutenberg_setup(){
     add_theme_support("align-wide");
-    add_theme_support( 'editor-styles' ); // if you don't add this line, your stylesheet won't be added
+    add_theme_support( 'editor-styles' );
 	add_editor_style( 'assets/build/css/gutenberg.css' );
 }
 
@@ -93,39 +93,18 @@ require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php
 /**
  * Add Gutenberg Blocks wrapper
  */
-// add_filter( 'render_block', 'wrap_table_block', 10, 2 );
-// function wrap_table_block( $block_content, $block ) {
 
-//     if($block['blockName'] === "core/column") return $block_content;
-
-//     $alignClass = $block['attrs']['align'] ? ' align' . $block['attrs']['align'] : '';
-
-//     $block_content = '<div class="blockWrapper'. $alignClass .'">' . $block_content . '</div>';
-  
-
-//     return $block_content;
-// }
-
-/**
- * Applies wrapper div around aligned blocks.
- *
- * Copy this function into your WordPress theme's `functions.php` file
- * and change the `themeprefix` accordingly.
- *
- * @see   https://developer.wordpress.org/reference/hooks/render_block/
- * @link  https://codepen.io/webmandesign/post/gutenberg-full-width-alignment-in-wordpress-themes
- *
- * @param  string $block_content  The block content about to be appended.
- * @param  array  $block          The full block, including name and attributes.
- */
 function sst_wrap_alignment( $block_content, $block ) {
+
 	if ( isset( $block['attrs']['align'] ) && in_array( $block['attrs']['align'], array( 'wide', 'full' ) ) ) {
 		$block_content = sprintf(
 			'<div class="%1$s">%2$s</div>',
 			'align-wrap align-wrap-' . esc_attr( $block['attrs']['align'] ),
 			$block_content
 		);
-	}
+	} elseif (true) {
+        
+    };
 	return $block_content;
 }
 

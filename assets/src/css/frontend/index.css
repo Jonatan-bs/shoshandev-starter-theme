@@ -2,6 +2,37 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+.gutenberg-content, .wp-site-blocks {
+    
+    ul{
+        li{
+            @apply list-disc list-inside;
+        }
+    }
+    ol{
+        li{
+            @apply list-decimal list-inside;
+        }
+    }
+
+
+
+    &>*{
+        @apply container mb-5;
+    }    
+    &>*:not(.align-wrap){
+        @apply lg:max-w-screen-lg;
+    }
+    
+    &>.align-wrap-wide{
+        @apply xl:max-w-screen-xl;
+    }
+    &>.align-wrap-full{
+        @apply max-w-full px-0 mx-0;
+    } 
+    
+} 
+
 /* .gutenberg-content > .alignfull {
 	width: calc(100% + 2 * 1.5rem);
 	max-width: none;

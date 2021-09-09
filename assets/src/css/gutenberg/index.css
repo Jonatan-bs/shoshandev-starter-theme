@@ -5,7 +5,11 @@
 
 .wp-block{
     box-sizing: border-box;
-    @apply container lg:max-w-screen-lg;
+    @apply mb-5;;
+}
+
+.editor-styles-wrapper .wp-block{
+    padding: 0 !important;
 }
 /*
 .wp-block[data-align=wide] {

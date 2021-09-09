@@ -31,10 +31,19 @@ module.exports = {
     extend: {
       // Adds a new breakpoint in addition to the default breakpoints
       colors: {
-        primary: "#e73778"
+        "primary": "var(--wp--preset--color--primary)",
+        "primary-dark": "var(--wp--preset--color--primary-dark)",
+        "secondary": "var(--wp--preset--color--secondary)",
+        "grey": "var(--wp--preset--color--grey)",
+        "grey-2": "var(--wp--preset--color--grey-2)",
+        "grey-3": "var(--wp--preset--color--grey-3)",
+        "grey-4": "var(--wp--preset--color--grey-4)",
+        "success": "var(--wp--preset--color--success)",
+        "error": "var(--wp--preset--color--error)"
       }
     }
   },
   variants: {},
   plugins: [],
 }
+
