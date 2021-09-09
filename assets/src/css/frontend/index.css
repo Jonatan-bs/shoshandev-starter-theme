@@ -7,7 +7,6 @@
     &>.blockWrapper{
         @apply container mb-5;
 
-        
     }    
     &>.blockWrapper:not(.alignfull):not(.alignwide){
         @apply lg:max-w-screen-lg;

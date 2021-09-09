@@ -29,9 +29,10 @@ module.exports = {
       xl: '1300px',
     },
     extend: {
+      // Adds a new breakpoint in addition to the default breakpoints
       colors: {
-        primary: colors.red
-      },
+        primary: "#e73778"
+      }
     }
   },
   variants: {},

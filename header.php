@@ -35,7 +35,7 @@
 				</div>
 				<div class="site-title ml-5">
 					
-					<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
+					<a class="text-white" href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
 						<?php bloginfo( 'name' );?>
 					</a>
 				</div>

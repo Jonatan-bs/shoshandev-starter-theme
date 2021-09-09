@@ -100,12 +100,6 @@ function wrap_table_block( $block_content, $block ) {
 
     $alignClass = $block['attrs']['align'] ? ' align' . $block['attrs']['align'] : '';
 
-    // $block['innerHTML'] = "";
-    // $block['innerContent'] = "";
-    // echo "<pre>";
-    // var_dump($block);
-    // echo "</pre>";
-
     $block_content = '<div class="blockWrapper'. $alignClass .'">' . $block_content . '</div>';
   
 
