@@ -16,12 +16,6 @@ module.exports = {
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
     },
-    // container: {
-    //   center: true,
-    //   padding: {
-    //     DEFAULT: '1rem',
-    //   },
-    // },
     screens: {
       sm: '520px',
       md: '768px',

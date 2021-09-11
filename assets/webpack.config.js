@@ -18,8 +18,13 @@ module.exports = [{
             },
           },
           {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],        
+            test: /\.scss$/i,
+            use: [
+              MiniCssExtractPlugin.loader,
+              { loader: 'css-loader', options: { importLoaders: 5 } },
+              { loader: 'postcss-loader' },
+              { loader: 'sass-loader' },
+            ],            
           },
         ],
       },
@@ -43,8 +48,13 @@ module.exports = [{
             },
           },
           {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],        
+            test: /\.scss$/i,
+            use: [
+              MiniCssExtractPlugin.loader,
+              { loader: 'css-loader', options: { importLoaders: 2 } },
+              { loader: 'postcss-loader' },
+              { loader: 'sass-loader' },
+            ],        
           },
         ],
       },

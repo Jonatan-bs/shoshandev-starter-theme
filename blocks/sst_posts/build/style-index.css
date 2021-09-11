@@ -7,10 +7,5 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
-.wp-block-sst-posts {
-  -ms-grid-columns: (minmax(0, 1fr))[var(--cols)];
-  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-  gap: var(--gap);
-}
 
 /*# sourceMappingURL=style-index.css.map*/

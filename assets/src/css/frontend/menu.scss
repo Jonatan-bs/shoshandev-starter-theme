@@ -1,0 +1,29 @@
+header {
+    .header-nav{
+
+    }
+    #menu-burger{
+        width: 50px;
+        cursor: pointer;
+    }
+    #toggle-nav{
+        min-width: 370px;        
+        transition: all .2s;
+        right: 0;
+        transform: translateX(100%);
+
+        @include screen-md{
+            display: none;
+        }
+    }
+    #toggle-nav.active{
+        transform: translateX(0%);
+    }
+    #menu-close{
+        width: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 60px;
+        right: 40px;
+    }
+}

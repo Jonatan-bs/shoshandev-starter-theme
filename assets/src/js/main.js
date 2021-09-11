@@ -1,2 +1,2 @@
-import "./../css/frontend/index.css"
+import "./../css/frontend/index.scss"
 import "./main/menu.js"
