@@ -6,7 +6,7 @@
 function enqueue_scripts()  { 
 
 	wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/assets/build/css/main.css');
-    // wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/build/js/main.js', array(), 1.0, true );
+    wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/src/js/main.js', array(), 1.0, true );
   
 }
 add_action( 'wp_enqueue_scripts', 'enqueue_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
@@ -89,12 +89,14 @@ add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
  * Add Gutenberg Blocks
  */
 require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php');
+require_once(get_template_directory() . '/blocks/sst_posts/sst_posts.php');
 
 /**
  * Add Gutenberg Blocks wrapper
  */
 
 function sst_wrap_alignment( $block_content, $block ) {
+    
 	if ( isset( $block['attrs']['align'] ) && in_array( $block['attrs']['align'], array( 'wide', 'full' ) ) ) {
 		$block_content = sprintf(
 			'<div class="%1$s">%2$s</div>',
@@ -134,22 +136,35 @@ add_filter( 'nav_menu_link_attributes', 'sst_menu_add_class', 10, 3 );
 /**
  * Remove blocks
  */ 
-function sst_allowed_block_types( $allowed_blocks, $post ) {
+function sst_allowed_block_types( $allowed_blocks, $editor_context ) {
  
-	// $allowed_blocks = array(
-	// 	'sst/mycustomblock',
-	// 	'core/columns',
-	// 	'core/image',
-	// 	'core/paragraph',
-	// 	'core/heading',
-	// 	'core/list'
-	// );
- 
-	// if( $post->post_type === 'page' ) {
-	// 	$allowed_blocks[] = 'core/shortcode';
-	// }
+    
+    if( $post->post_type === 'post' ) {
+        $allowed_blocks = array(
+            'sst/slider',
+            'sst/mycustomblock',
+            'core/columns',
+            'core/image',
+            'core/cover',
+            'core/video',
+            'core/paragraph',
+            'core/gallery',
+            'core/heading',
+            'core/list',
+            'core/shortcode'
+        );
+	}
  
 	return $allowed_blocks;
  
 }
-add_filter( 'allowed_block_types', 'sst_allowed_block_types', 10, 2 );
+add_filter( 'allowed_block_types_all', 'sst_allowed_block_types', 10, 2 );
+
+/**
+ * excerpt length
+ */
+function mytheme_custom_excerpt_length( $length ) {
+    return 10;
+}
+add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+

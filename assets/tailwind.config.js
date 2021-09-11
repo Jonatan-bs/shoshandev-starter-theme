@@ -45,27 +45,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    // function (a) {
-    //   let {addComponents, theme} = a
-    //   console.log(theme())
-    //   addComponents({
-    //     '.container': {
-    //       maxWidth: '100%',
-    //       '@screen sm': {
-    //         maxWidth: '600px',
-    //       },
-    //       '@screen md': {
-    //         maxWidth: '700px',
-    //       },
-    //       '@screen lg': {
-    //         maxWidth: '800px',
-    //       },
-    //       '@screen xl': {
-    //         maxWidth: '900px',
-    //       },
-    //     }
-    //   })
-    // }
+    require('@tailwindcss/aspect-ratio')
   ],
   corePlugins: {
    container: false,
