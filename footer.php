@@ -8,8 +8,9 @@
 </main><!-- / end page container, begun in the header -->
 
 <footer class="bg-black h-32 text-white mt-20">
-		
-		<p>Footer</p>
+		<div class="container">
+			<p>Footer</p>
+		</div>
 		
 </footer><!-- #colophon .site-footer -->
 
