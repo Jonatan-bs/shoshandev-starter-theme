@@ -4,19 +4,27 @@
 	"description": "",
 	"license": "UNLICENSED",
 	"scripts": {
-		"watch:frontend": "npx postcss src/css/frontend/index.css -o build/css/main.css --watch",
-		"watch:gutenberg": "npx postcss src/css/gutenberg/index.css -o build/css/gutenberg.css --watch",
-		"build": "NODE_ENV=production npx postcss src/css/frontend/index.css -o build/css/main.css --minify && NODE_ENV=production npx postcss src/css/gutenberg/index.css -o build/css/gutenberg.css --minify"
+		"watch": "webpack  --mode development --watch",
+		"build": "webpack  --mode production"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.3.4",
+		"mini-css-extract-plugin": "^2.3.0",
 		"postcss": "^8.3.6",
 		"postcss-cli": "^8.3.1",
 		"postcss-import": "^14.0.2",
 		"precss": "^4.0.0",
-		"tailwindcss": "^2.2.9"
+		"tailwindcss": "^2.2.9",
+		"webpack": "^5.52.1",
+		"webpack-cli": "^4.8.0"
 	},
 	"dependencies": {
-		"@tailwindcss/aspect-ratio": "^0.2.1"
+		"@babel/core": "^7.15.5",
+		"@tailwindcss/aspect-ratio": "^0.2.1",
+		"babel-loader": "^8.2.2",
+		"css-loader": "^6.2.0",
+		"postcss-loader": "^6.1.1",
+		"postcss-preset-env": "^6.7.0",
+		"style-loader": "^3.2.1"
 	}
 }

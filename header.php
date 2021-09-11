@@ -23,7 +23,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="bg-black text-white mb-16">
+<header class="bg-primary text-white mb-16">
 	<div  class="container py-5 flex justify-between items-center">
 
 		<div>
@@ -47,8 +47,12 @@
 		<nav>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex gap-5', 'add_anchor_class'  => 'text-white' ) ); // Display the user-defined menu in Appearance > Menus ?>
 		</nav><!-- .site-navigation .main-navigation -->
+
+		<img class="menu-burger" src="<?= get_template_directory_uri()?>/assets/src/img/menu_icon.svg"/>
 	</div>
-		
+	<nav class="toggle-nav bg-black fixed right-0 top-0 h-full pt-32 px-20 z-50 w-">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex flex-col items-center text-3xl gap-5', 'add_anchor_class'  => 'text-white' ) ); // Display the user-defined menu in Appearance > Menus ?>
+	</nav>
 </header><!-- #masthead .site-header -->
 
 <main><!-- start the page containter -->

@@ -1,4 +1,5 @@
 @import '../shared/index.css';
+@import './menu.css';
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
