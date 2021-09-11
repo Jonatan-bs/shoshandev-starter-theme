@@ -1,5 +1,5 @@
 <?php 
-    echo get_comments_number();
+    echo "(".get_comments_number() . ") kommentarer";
 ?>
 
 <?php 
