@@ -1,0 +1,11 @@
+.sst_button{
+    min-width: 200px;   
+    @apply p-2 text-base bg-primary hover:border-primary-dark inline-block text-center border-4 border-primary text-white;
+
+    &.outline{
+        @apply bg-transparent hover:bg-primary hover:text-white border-4 border-primary text-primary;
+    }
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}

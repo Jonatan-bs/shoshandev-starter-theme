@@ -1,0 +1,20 @@
+{
+	"apiVersion": 2,
+	"name": "sst/button",
+	"version": "0.1.0",
+	"title": "button",
+	"category": "sst",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false,
+		"align": ["wide"]
+
+	},
+	"textdomain": "sst-button",
+	"attributes": {
+		"button": {
+			"type": "array",
+			"default": []	
+		}
+	}
+}

@@ -88,8 +88,7 @@ add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
 /**
  * Add Gutenberg Blocks
  */
-require_once(get_template_directory() . '/blocks/mycustomblock/mycustomblock.php');
-require_once(get_template_directory() . '/blocks/sst_posts/sst_posts.php');
+require_once(get_template_directory() . '/blocks/index.php');
 
 /**
  * Add Gutenberg Blocks wrapper
