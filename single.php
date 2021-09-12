@@ -18,19 +18,16 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 					<article class="post">
 						<div class="container lg:max-w-screen-lg">
 							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
-							<div class="post-meta">
-								<?php the_time('m.d.Y'); // Display the time it was published ?>
-							</div><!--/post-meta -->
+							<div class="mb-5">
+								<small>
+									<div class="-mb-1"><?php echo get_the_category_list(); // Display the categories this post belongs to, as links ?></div>
+									<div><?php echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); // Display the tags this post has, as links separated by spaces and pipes ?></div>
+									<?php the_time('m.d.Y'); // Display the time it was published ?>
+								</small><!--/post-meta -->
+							</div>
 						</div>
 						<?php get_template_part( "template-parts/content", "page") ?>
 						<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
-						<div class="container lg:max-w-screen-lg">
-						
-							<div class="meta clearfix">
-								<div class="category"><?php echo get_the_category_list(); // Display the categories this post belongs to, as links ?></div>
-								<div class="tags"><?php echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); // Display the tags this post has, as links separated by spaces and pipes ?></div>
-							</div>
-						</div>
 					</article>
 
 				<?php endwhile; // OK, let's stop the post loop once we've displayed it ?>

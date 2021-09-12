@@ -1,18 +1,6 @@
 <?php
 
 /**
- * Enqueue frontend and editor JavaScript and CSS
- */
-function ssr_button_enqueue_scripts() {
-    // Enqueue block editor Scripts
-    wp_enqueue_script( 'sst-button.js', get_template_directory_uri() . '/blocks/sst_button/inc/index.js', array(), 1.0, true );
-
-}
-
-// Hook the enqueue functions into the frontend and editor
-add_action( 'enqueue_block_assets', 'ssr_button_enqueue_scripts' );
-
-/**
  * Registers the block using the metadata loaded from the `block.json` file.
  * Behind the scenes, it registers also all assets so they can be enqueued
  * through the block editor in the corresponding context.
@@ -38,6 +26,6 @@ add_action( 'init', 'sst_button_init' );
 
 function sst_button_dynamic_render_callback( $attributes, $content ) {
     ob_start();
-    include_once __DIR__ . "/template.php";
+    include __DIR__ . "/template.php";
     return ob_get_clean();
 }

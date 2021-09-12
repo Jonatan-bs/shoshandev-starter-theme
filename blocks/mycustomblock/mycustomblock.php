@@ -24,6 +24,7 @@ function sst_mycustomblock_init() {
 add_action( 'init', 'sst_mycustomblock_init' );
 
 function sst_mycustomblock_dynamic_render_callback( $attributes, $content, $aaa ) {
+    
     return sprintf(
         <<<HTML
             <p class="wp-block-sst-mycustomblock %s"> Heyoooooo </p>

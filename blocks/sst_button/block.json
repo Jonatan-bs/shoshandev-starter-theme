@@ -7,14 +7,30 @@
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false,
+		"url": true,
 		"align": ["wide"]
-
 	},
 	"textdomain": "sst-button",
 	"attributes": {
-		"button": {
-			"type": "array",
-			"default": []	
+		"style": {
+			"type": "string",
+			"default": ""	
+		},
+		"link": {
+			"type": "object",
+			"default": {"opensInNewTab": true, "link": null}	
+		},
+		"opensInNewTab": {
+			"type": "boolean",
+			"default": false	
+		},
+		"alignment": {
+			"type": "string",
+			"default": "left"	
+		},
+		"text": {
+			"type": "string",
+			"default": "Button text"	
 		}
 	}
 }

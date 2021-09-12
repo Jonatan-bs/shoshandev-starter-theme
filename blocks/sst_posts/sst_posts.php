@@ -38,6 +38,6 @@ add_action( 'init', 'sst_posts_init' );
 
 function sst_posts_dynamic_render_callback( $attributes, $content ) {
     ob_start();
-    include_once __DIR__ . "/template.php";
+    include __DIR__ . "/template.php";
     return ob_get_clean();
 }

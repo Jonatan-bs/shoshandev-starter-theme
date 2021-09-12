@@ -9,20 +9,6 @@
 .editor-styles-wrapper .wp-block{
     padding: 0 !important;
 }
-/*
-.wp-block[data-align=wide] {
-    @apply container xl:max-w-screen-xl;
-}
-
-.wp-block[data-align=full] {
-    @apply max-w-full;
-}
-
-.is-root-container{
-    &>*{
-        @apply mb-5;
-    }
-} */
 
 li{
     @apply leading-normal;

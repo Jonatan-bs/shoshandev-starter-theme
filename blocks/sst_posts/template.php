@@ -17,8 +17,8 @@
     $query = new WP_Query( $args );
     if ( $query->have_posts() ) {  while ( $query->have_posts() ) { $query->the_post();
         ob_start(); ?>
-            <div class="overflow-hidden">
-                <a style="<?php echo $is_backend? 'pointer-events: none' : '';?>" href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>">
+            <div class="overflow-hidden" style="<?php echo $is_backend? 'pointer-events: none' : '';?>">
+                <a href="<?php the_permalink(); ?>" title="Link to <?php the_title_attribute(); ?>">
                     <div class="aspect-w-16 aspect-h-9">
                         <?php the_post_thumbnail('' , array('class' => ' object-cover object-center')) ?>
                     </div>

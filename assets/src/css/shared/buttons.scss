@@ -1,8 +1,8 @@
-.sst_button{
+.sst_button, input[type="submit"]{
     min-width: 200px;   
-    @apply p-2 text-base bg-primary hover:border-primary-dark inline-block text-center border-4 border-primary text-white;
+    @apply cursor-pointer p-2 text-base bg-primary hover:bg-primary-dark hover:border-primary-dark inline-block text-center border-4 border-primary text-white;
 
-    &.outline{
+    &.style-outline{
         @apply bg-transparent hover:bg-primary hover:text-white border-4 border-primary text-primary;
     }
 }

@@ -6,5 +6,9 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+.block-editor-link-control {
+  position: relative;
+  min-width: 230px;
+}
 
 /*# sourceMappingURL=index.css.map*/
