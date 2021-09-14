@@ -7,7 +7,7 @@
 
 </main><!-- / end page container, begun in the header -->
 
-<footer class="bg-primary h-32 text-white mt-20">
+<footer class="bg-primary py-12 text-white mt-20">
 		<div class="container">
 			<p>Footer</p>
 		</div>

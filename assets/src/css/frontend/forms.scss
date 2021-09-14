@@ -1,3 +1,6 @@
 input, textarea{
-    @apply border border-primary text-base w-full
+    @apply border border-primary text-base w-full py-2 px-3 rounded mb-5
+}
+label{
+    @apply text-base text-gray-600
 }

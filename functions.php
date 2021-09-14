@@ -83,7 +83,7 @@ function sst_block_categories( $categories ) {
     );
 }
 
-add_filter( 'block_categories', 'sst_block_categories', 10, 2 );
+add_filter( 'block_categories_all', 'sst_block_categories', 10, 2 );
 
 /**
  * Add Gutenberg Blocks
@@ -110,17 +110,6 @@ function sst_wrap_alignment( $block_content, $block ) {
 
 add_filter( 'render_block', 'sst_wrap_alignment', 10, 2 );
 
-
-/**
- * Register sidebar
- */
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-        'name' => 'frontpage',
-        'before_widget' => '<div class="widgetizedArea">',
-        'after_widget' => '</div>',
-    )
-);
 /**
  * Add classes on nav links
  */
@@ -137,22 +126,6 @@ add_filter( 'nav_menu_link_attributes', 'sst_menu_add_class', 10, 3 );
  */ 
 function sst_allowed_block_types( $allowed_blocks, $editor_context ) {
  
-    
-    if( $post->post_type === 'post' ) {
-        $allowed_blocks = array(
-            'sst/slider',
-            'sst/mycustomblock',
-            'core/columns',
-            'core/image',
-            'core/cover',
-            'core/video',
-            'core/paragraph',
-            'core/gallery',
-            'core/heading',
-            'core/list',
-            'core/shortcode'
-        );
-	}
  
 	return $allowed_blocks;
  
@@ -166,4 +139,5 @@ function mytheme_custom_excerpt_length( $length ) {
     return 10;
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+
 

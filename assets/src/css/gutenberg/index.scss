@@ -6,20 +6,19 @@
     @apply mb-5;;
 }
 
-.editor-styles-wrapper .wp-block{
-    padding: 0 !important;
-}
 
-li{
-    @apply leading-normal;
-}
-ul{
+
+
+ul.wp-block-list {
     li{
         @apply list-disc list-inside;
     }
 }
-ol{
+ol.wp-block-list {
     li{
         @apply list-decimal list-inside;
     }
+}
+li{
+    @apply leading-normal;
 }
