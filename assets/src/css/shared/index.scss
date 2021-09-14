@@ -5,6 +5,10 @@
 @import "./app-utilities.scss";
 
 @layer base {
+    p,a,h1,h2,h3,h4,h5{
+        @apply leading-normal
+    }
+
     html{
         font-size: 120%;
     }

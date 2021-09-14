@@ -12,9 +12,33 @@
 	},
 	"textdomain": "sst-posts",
 	"attributes": {
-		"posts": {
+		"posts":{
 			"type": "array",
 			"default": []	
+		},
+		"postsAmount":{
+			"type": "number",
+			"default": 3
+		},
+		"postType":{
+			"type": "string",
+			"default": "post"
+		},
+		"order":{
+			"type": "string",
+			"default": "DESC"
+		},
+		"cols":{
+			"type": "number",
+			"default": 3
+		},
+		"postsPerLoad":{
+			"type": "number",
+			"default": 3
+		},
+		"loadmore":{
+			"type": "boolean",
+			"default": true
 		}
 	}
 }
