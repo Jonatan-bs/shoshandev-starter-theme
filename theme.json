@@ -67,14 +67,54 @@
         "typography": {
 			"fontSizes": [
 				{
-					"slug": "Default",
-					"size": "1.123rem",
-					"name": "Default"
+					"slug": "xs",
+					"size": ".75rem",
+					"name": "xs"
 				},
 				{
 					"slug": "sm",
-					"size": "1.123rem",
+					"size": ".875rem",
 					"name": "sm"
+				},
+				{
+					"slug": "base",
+					"size": "1rem",
+					"name": "base"
+				},
+				{
+					"slug": "lg",
+					"size": "1.125rem",
+					"name": "lg"
+				},
+				{
+					"slug": "xl",
+					"size": "1.25rem",
+					"name": "xl"
+				},
+				{
+					"slug": "2xl",
+					"size": "1.5rem",
+					"name": "2xl"
+				},
+				{
+					"slug": "3xl",
+					"size": "1.875rem",
+					"name": "3xl"
+				},
+				{
+					"slug": "4xl",
+					"size": "2.25rem",
+					"name": "4xl"
+				},
+				{
+					"slug": "5xl",
+					"size": "3rem",
+					"name": "5xl"
+				},
+				{
+					"slug": "6xl",
+					"size": "4rem",
+					"name": "6xl"
 				}
 			]
 		}
