@@ -1,7 +1,5 @@
-
 <?php 
     // $attributes, $content
-    $classes = $attributes['align']? 'align-'. $attributes['align'] : '';   
     $style = $attributes['style'] ? "style-".$attributes['style'] : '';
     $text = $attributes['text'];
     $opensInNewTab = $attributes['link']['opensInNewTab'];

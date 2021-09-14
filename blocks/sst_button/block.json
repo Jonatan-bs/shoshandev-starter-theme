@@ -7,7 +7,6 @@
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"supports": {
 		"html": false,
-		"url": true,
 		"align": ["wide"]
 	},
 	"textdomain": "sst-button",

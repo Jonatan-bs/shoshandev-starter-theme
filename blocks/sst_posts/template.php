@@ -1,9 +1,7 @@
 
 <?php 
     // $attributes, $content
-    $classes = $attributes['align']? 'align-'. $attributes['align'] : '';
-    $is_backend = defined('REST_REQUEST') && true === REST_REQUEST && 'edit' === filter_input( INPUT_GET, 'context', FILTER_SANITIZE_STRING );
-    
+    $is_backend = defined('REST_REQUEST') && true === REST_REQUEST && 'edit' === filter_input( INPUT_GET, 'context', FILTER_SANITIZE_STRING );    
 ?>
 
 
