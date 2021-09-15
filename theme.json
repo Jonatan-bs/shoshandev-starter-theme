@@ -1,11 +1,49 @@
 {
     "version": 1,
+	"styles": {
+		"color": {
+            "link": "var(--wp--preset--color--primary)"        
+		},
+		"elements": {
+            "h1": {
+				"typography": {
+                    "fontSize": "var(--wp--preset--font-size--6-xl)"
+                }
+            },
+            "h2": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--4-xl)"
+                }
+            },
+            "h3": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--3-xl)"
+                }
+            },
+            "h4": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--2-xl)"
+                }
+            },
+            "h5": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--xl)"
+                }
+            },
+            "h6": {
+                "typography": {
+                    "fontSize": "var(--wp--preset--font-size--2-xl)"
+                }
+            }
+        }
+	},
     "settings": {
 		"layout": {
 			"contentSize": "976px",
 			"wideSize": "1300px"
 		},		
 		"color": {
+			"link": true,
 			"palette": [
 				{
 					"slug": "primary",
@@ -65,6 +103,9 @@
 			]
 		},
         "typography": {
+			"customFontSize": false,
+            "customLineHeight": false,
+            "dropCap": true,
 			"fontSizes": [
 				{
 					"slug": "xs",

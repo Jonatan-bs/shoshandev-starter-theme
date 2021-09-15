@@ -16,17 +16,18 @@ module.exports = {
     fontFamily: {
       'sans': ['Roboto', 'sans-serif'],
     },
+    // Match theme.json
     fontSize: {
-      'xs': '.75rem',
-      'sm': '.875rem',
-      'base': '1rem',
-      'lg': '1.125rem',
-      'xl': '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '4rem',
+      'xs': 'var(--wp--preset--font-size--xs)',
+      'sm': 'var(--wp--preset--font-size--sm)',
+      'base': 'var(--wp--preset--font-size--base)',
+      'lg': 'var(--wp--preset--font-size--lg)',
+      'xl': 'var(--wp--preset--font-size--xl)',
+      '2xl': 'var(--wp--preset--font-size--2-xl)',
+      '3xl': 'var(--wp--preset--font-size--3-xl)',
+      '4xl': 'var(--wp--preset--font-size--4-xl)',
+      '5xl': 'var(--wp--preset--font-size--5-xl)',
+      '6xl': 'var(--wp--preset--font-size--6-xl)',
     },
     screens: {
       sm: '520px',
@@ -35,7 +36,7 @@ module.exports = {
       xl: '1300px',
     },
     extend: {
-      // Adds a new breakpoint in addition to the default breakpoints
+      // Match theme.json
       colors: {
         "primary": "var(--wp--preset--color--primary)",
         "primary-dark": "var(--wp--preset--color--primary-dark)",
@@ -54,6 +55,7 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ],
   corePlugins: {
+    // added container in /src/shared/tw-components.scss
    container: false,
   }
 }

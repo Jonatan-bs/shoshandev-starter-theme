@@ -2,64 +2,6 @@
 @import './forms.scss';
 @import './menu.scss';
 
-.gutenberg-content, .wp-site-blocks {
-    
-    ul:not(.wp-block-post-template){
-        li{
-            @apply list-disc list-inside;
-        }
-    }
-    ol:not(.wp-block-post-template){
-        li{
-            @apply list-decimal list-inside;
-        }
-    }
-
-
-
-    &>*, .wp-block-group>*{
-        @apply container mb-5;
-    }    
-    &:not(.wide)>*:not(.align-wrap){
-        @apply lg:max-w-screen-lg;
-    }
-    &.wide>*:not(.align-wrap){
-        @apply xl:max-w-screen-xl;
-    }
-    
-    &>.align-wrap-wide{
-        @apply xl:max-w-screen-xl;
-    }
-    &>.align-wrap-full{
-        @apply max-w-full px-0 mx-0 w-full;
-    } 
-    
-} 
-
-.wp-block-gallery>* {
-    width: 100%;
-}
-
-/* .gutenberg-content > .alignfull {
-	width: calc(100% + 2 * 1.5rem);
-	max-width: none;
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
-}
-.gutenberg-content > .align-wrap {
-	width: calc(100% + 2 * 1.5rem);
-	max-width: none;
-	margin-left: -1.5rem;
-	margin-right: -1.5rem;
-}
-
-.align-wrap .alignfull {
-	width: 100%;
-	max-width: 100%;
-	margin: 0 auto;
-} */
-
-
 @layer base{
     html, body {
         height: 100%;
@@ -73,5 +15,44 @@
     }
     footer {
         flex-shrink: 0;
+    }
+
+    .gutenberg-content, .wp-site-blocks {
+    
+        ul:not(.wp-block-post-template){
+            li{
+                @apply list-disc list-inside;
+            }
+        }
+        ol:not(.wp-block-post-template){
+            li{
+                @apply list-decimal list-inside;
+            }
+        }
+        
+        .wp-block-separator{
+            @apply mb-5;
+        }
+        &>*, .wp-block-group>*{
+            @apply container mb-5;
+        }    
+        &:not(.wide)>*:not(.align-wrap){
+            @apply lg:max-w-screen-lg;
+        }
+        &.wide>*:not(.align-wrap){
+            @apply xl:max-w-screen-xl;
+        }
+        
+        &>.align-wrap-wide{
+            @apply xl:max-w-screen-xl;
+        }
+        &>.align-wrap-full{
+            @apply max-w-full px-0 mx-0 w-full;
+        } 
+        
+    } 
+    
+    .wp-block-gallery>* {
+        width: 100%;
     }
 }
