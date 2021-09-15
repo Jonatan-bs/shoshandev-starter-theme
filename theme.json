@@ -1,8 +1,16 @@
 {
     "version": 1,
 	"styles": {
+
 		"color": {
             "link": "var(--wp--preset--color--primary)"        
+		},
+		"blocks": {
+			"core/list": {
+					"typography": {
+						"fontSize": "var(--wp--preset--font-size--base)"
+					}
+				}
 		},
 		"elements": {
             "h1": {

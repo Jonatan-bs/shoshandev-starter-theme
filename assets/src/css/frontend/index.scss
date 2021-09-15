@@ -33,9 +33,10 @@
         .wp-block-separator{
             @apply mb-5;
         }
-        &>*, .wp-block-group>*{
+        &>*{
             @apply container mb-5;
-        }    
+        }   
+         
         &:not(.wide)>*:not(.align-wrap){
             @apply lg:max-w-screen-lg;
         }

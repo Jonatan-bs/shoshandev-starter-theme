@@ -22,8 +22,10 @@
     html{
         font-size: 100%;
     }
-    .wp-block-group.has-background{
-        @apply py-4 px-0;
+    .wp-block-group,h1,h2,h3,h4,h5,h6{
+        .has-background{
+            @apply py-4 px-4;
+        }
     }
 } 
 
