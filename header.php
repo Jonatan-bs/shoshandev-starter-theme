@@ -50,9 +50,9 @@
 
 		<img id="menu-burger" class="md:hidden" src="<?= get_template_directory_uri()?>/assets/src/img/menu_icon.svg"/>
 	</div>
-	<nav id="toggle-nav" class=" bg-black fixed top-0 h-full pt-32 px-20 z-50 ">
+	<nav id="toggle-nav">
 		<img id="menu-close" src="<?= get_template_directory_uri()?>/assets/src/img/close.svg"/>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex flex-col items-center text-3xl gap-5', 'add_anchor_class'  => 'text-white' ) ); // Display the user-defined menu in Appearance > Menus ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'link_after' => '<div class="arrow"></div>'  ) ); // Display the user-defined menu in Appearance > Menus ?>
 	</nav>
 </header><!-- #masthead .site-header -->
 

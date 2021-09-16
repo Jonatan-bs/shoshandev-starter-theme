@@ -1,4 +1,5 @@
 header {
+    
     .header-nav{
         & .menu-item a{
             @apply px-4 py-5;
@@ -58,6 +59,50 @@ header {
         transition: all .2s;
         right: 0;
         transform: translateX(100%);
+        @apply  pt-32 bg-black fixed top-0 h-full z-50;
+
+        & li.menu-item-has-children{
+            &>a>.arrow{
+                aspect-ratio: 1;
+                @apply h-full absolute right-0 top-0 flex items-center justify-center;
+                background-color: rgba($color: #fff, $alpha: 0.2);
+
+                &::after{
+                    content: "";
+                    border: solid #fff;
+                    border-width: 0 2px 2px 0;
+                    display: inline-block;
+                    padding: 3px;
+                    margin-bottom: 1px;
+                    transform: rotate(45deg);
+                    transition: all .1s;        
+                }
+            }
+            &>a{
+                @apply relative;           
+            }
+            &.active{
+                &>a>.arrow::after{
+                    transform: rotate(225deg);            
+                }
+
+                .sub-menu{
+                    @apply block;
+                }
+            }
+            & .sub-menu {
+                @apply hidden;
+                
+                a{
+                    @apply  w-full text-white block px-5 py-5 pl-7 hover:bg-primary-dark relative border-b;
+                    background-color: rgba($color: #fff, $alpha: .1); 
+                }
+            }
+        }
+        & a{
+            @apply  w-full text-white block px-5 py-5 hover:bg-primary-dark relative border-b;
+            border-color: rgba($color: #fff, $alpha: .1);            
+        }
 
         @include screen-md{
             display: none;
