@@ -140,4 +140,3 @@ function mytheme_custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
 
-

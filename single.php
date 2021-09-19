@@ -18,6 +18,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 					<article class="post">
 						<div class="container lg:max-w-screen-lg">
 							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
+							<?php the_post_thumbnail() ?>
 							<div class="mb-5">
 								<small>
 									<div class="-mb-1"><?php echo get_the_category_list(); // Display the categories this post belongs to, as links ?></div>

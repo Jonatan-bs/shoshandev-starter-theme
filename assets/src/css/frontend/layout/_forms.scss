@@ -1,0 +1,16 @@
+input, textarea{
+    border-width: 1px;
+    border-color: var(--wp--preset--color--primary);
+    font-size: var(--wp--preset--font-size--base);
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.25rem;
+}
+label{
+    font-size: var(--wp--preset--font-size--base);
+    color: var(--wp--preset--color--grey-3);
+}

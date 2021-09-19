@@ -1,59 +1,6 @@
 @import '../shared/index.scss';
-@import './forms.scss';
-@import './menu.scss';
-
-@layer base{
-    html, body {
-        height: 100%;
-    }
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    main {
-        flex: 1 0 auto;
-    }
-    footer {
-        flex-shrink: 0;
-    }
-
-    .gutenberg-content, .wp-site-blocks {
-    
-        ul:not(.wp-block-post-template){
-            li{
-                @apply list-disc list-inside;
-            }
-        }
-        ol:not(.wp-block-post-template){
-            li{
-                @apply list-decimal list-inside;
-            }
-        }
-        
-        .wp-block-separator{
-            @apply mb-5;
-        }
-        &>*{
-            @apply container mb-5;
-        }   
-         
-        &:not(.wide)>*:not(.align-wrap){
-            @apply lg:max-w-screen-lg;
-        }
-        &.wide>*:not(.align-wrap){
-            @apply xl:max-w-screen-xl;
-        }
-        
-        &>.align-wrap-wide{
-            @apply xl:max-w-screen-xl;
-        }
-        &>.align-wrap-full{
-            @apply max-w-full px-0 mx-0 w-full;
-        } 
-        
-    } 
-    
-    .wp-block-gallery>* {
-        width: 100%;
-    }
-}
+@import './layout/_forms.scss';
+@import './layout/_navigation.scss';
+@import './layout/_header.scss';
+@import './layout/_footer.scss';
+@import './_base.scss';

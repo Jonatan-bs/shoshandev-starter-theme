@@ -1,13 +1,24 @@
 header {
-    
     .header-nav{
+        display: none;
+        @include screen-md{
+            display: block;
+        }
+
+        #menu-primary-menu{
+            display: flex;
+        }
         & .menu-item a{
-            @apply px-4 py-5;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
         }
         .menu-item-has-children{
             position: relative;
 
             // Show downarrow if item has subpages
+
             &>a::after {
                 content: "";
                 border: solid #fff;
@@ -33,13 +44,15 @@ header {
                 display: none;
                 min-width: 270px;                
                 top: calc(100%);
-                @apply absolute -right-5;
-
+                position: absolute;
+                right: 1.25rem;
                 & li{
-                    @apply bg-primary-dark;
+                    background-color: var(--wp--preset--color--primary);
                     & a{
                         width: 100%;
-                        @apply  px-5 py-5 block;
+                        display: block;
+                        padding-left: 1.25rem;
+                        padding-right: 1.25rem;
 
                         &:hover{
                             background-color: rgba($color: #000000, $alpha: 0.2);
@@ -51,6 +64,9 @@ header {
 
     }
     #menu-burger{
+        @include screen-md{
+            display: none;
+        }
         width: 40px;
         cursor: pointer;
     }
@@ -59,12 +75,23 @@ header {
         transition: all .2s;
         right: 0;
         transform: translateX(100%);
-        @apply  pt-32 bg-black fixed top-0 h-full z-50;
+        position: fixed;
+        background-color: var(--wp--preset--color--black);
+        top: 0;
+        height: 100%;
+        z-index: 50;
+        padding-top: 8rem;
 
         & li.menu-item-has-children{
             &>a>.arrow{
                 aspect-ratio: 1;
-                @apply h-full absolute right-0 top-0 flex items-center justify-center;
+                height: 100%;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 background-color: rgba($color: #fff, $alpha: 0.2);
 
                 &::after{
@@ -79,7 +106,8 @@ header {
                 }
             }
             &>a{
-                @apply relative;           
+                position: relative;
+                cursor: pointer;
             }
             &.active{
                 &>a>.arrow::after{
@@ -87,21 +115,44 @@ header {
                 }
 
                 .sub-menu{
-                    @apply block;
+                    display: block;
                 }
             }
             & .sub-menu {
-                @apply hidden;
+                display: none;
                 
                 a{
-                    @apply  w-full text-white block px-5 py-5 pl-7 hover:bg-primary-dark relative border-b;
+                    width: 100%;
+                    color: var(--wp--preset--color--white);
+                    display: block;
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                    padding-left: 1.75rem;
+                    position: relative;
+                    border-bottom-width: 1px;
                     background-color: rgba($color: #fff, $alpha: .1); 
+
+                    &:hover{
+                        background-color: var(--wp--preset--color--primary-dark);
+                    }
                 }
             }
         }
         & a{
-            @apply  w-full text-white block px-5 py-5 hover:bg-primary-dark relative border-b;
+            width: 100%;
+            color: var(--wp--preset--color--white);
+            display: block;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            padding-top: 1.25rem;
+            padding-bottom: 1.25rem;
+            position: relative;
+            border-bottom-width: 1px;
             border-color: rgba($color: #fff, $alpha: .1);            
+
+            &:hover{
+                background-color: var(--wp--preset--color--primary-dark);
+            }
         }
 
         @include screen-md{

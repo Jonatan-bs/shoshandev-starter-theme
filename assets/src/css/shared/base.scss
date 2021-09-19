@@ -1,0 +1,38 @@
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    font-size: var(--wp--preset--font-size--base);
+}
+
+p,a,h1,h2,h3,h4,h5{
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.title, .editor-post-title__input{
+    font-size: var(--wp--preset--font-size--5-xl);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+
+    @include screen-md{
+        font-size: var(--wp--preset--font-size--6-xl);
+    }
+}
+html{
+    font-size: 100%;
+}
+.wp-block-group,h1,h2,h3,h4,h5,h6{
+    .has-background{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;  
+    }
+}
+
+
+

@@ -23,8 +23,14 @@ window.addEventListener('resize', hideMenu)
  */
  mobileNav.querySelectorAll('.menu-item-has-children').forEach( submenu => {
     submenu.querySelector('a').addEventListener('click', (e)=>{
-        if(e.target.classList.contains('arrow')){
+        if(e.target.classList.contains('arrow') && e.currentTarget.href){
             e.preventDefault();
+            if(submenu.classList.contains('active')){
+                submenu.classList.remove('active')
+            } else {
+                submenu.classList.add('active')
+            }
+        } else {
             if(submenu.classList.contains('active')){
                 submenu.classList.remove('active')
             } else {

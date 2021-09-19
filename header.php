@@ -23,19 +23,19 @@
 
 <body <?php body_class(); ?>>
 
-<header class="bg-primary text-white mb-16">
-	<div  class="container py-5 flex justify-between items-center">
+<header>
+	<div  class="container">
 
 		<div>
-			<h1 class="flex items-center text-2xl">
-				<div class="w-16">	
+			<h1 class="brandWrapper">
+				<div class="logo">	
 					<?php 
 					the_custom_logo(); 
 					?>
 				</div>
-				<div class="site-title ml-5">
+				<div class="site_title">
 					
-					<a class="text-white" href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
+					<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home">
 						<?php bloginfo( 'name' );?>
 					</a>
 				</div>
@@ -44,11 +44,11 @@
 		
 
 	
-		<nav class="header-nav hidden md:block">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'flex', 'add_anchor_class'  => 'text-white' ) ); // Display the user-defined menu in Appearance > Menus ?>
+		<nav class="header-nav">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
 		</nav><!-- .site-navigation .main-navigation -->
 
-		<img id="menu-burger" class="md:hidden" src="<?= get_template_directory_uri()?>/assets/src/img/menu_icon.svg"/>
+		<img id="menu-burger" src="<?= get_template_directory_uri()?>/assets/src/img/menu_icon.svg"/>
 	</div>
 	<nav id="toggle-nav">
 		<img id="menu-close" src="<?= get_template_directory_uri()?>/assets/src/img/close.svg"/>

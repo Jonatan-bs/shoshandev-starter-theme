@@ -3,22 +3,21 @@
 
 .wp-block{
     box-sizing: border-box;
-    @apply mb-5;
+    margin-bottom: 1.25rem;
 }
-
-
-
 
 ul.wp-block-list {
     li{
-        @apply list-disc list-inside;
+        list-style-type: disc;
+        list-style-position: inside;
     }
 }
 ol.wp-block-list {
     li{
-        @apply list-decimal list-inside;
+        list-style-type: decimal;
+        list-style-position: inside;
     }
 }
 li{
-    @apply leading-normal;
+    line-height: 1.5;
 }

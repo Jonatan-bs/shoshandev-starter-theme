@@ -1,32 +1,9 @@
-@import "./buttons.scss";
 @import "./breakpoints.scss";
-@import "./tw-components.scss";
-@import "./app.scss";
+@import "./components/buttons.scss";
+@import "./components/containers.scss";
+@import "./normalize.scss";
+@import "./base.scss";
+@import "./blocks/sst-posts.scss";
 
-
-
-@layer base {
-    p{
-        @apply text-base;
-    }
-    p,a,h1,h2,h3,h4,h5{
-        @apply leading-normal font-normal;
-    }
-
-    body{
-        font-family: 'Roboto', sans-serif;
-    }
-    .title, .editor-post-title__input{
-        @apply text-6xl font-bold pb-0;
-    }
-    html{
-        font-size: 100%;
-    }
-    .wp-block-group,h1,h2,h3,h4,h5,h6{
-        .has-background{
-            @apply py-4 px-4;
-        }
-    }
-} 
 
 

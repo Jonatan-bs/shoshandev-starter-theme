@@ -1,0 +1,31 @@
+header{
+    background-color: var(--wp--preset--color--primary);
+    color: var(--wp--preset--color--white);
+    margin-bottom: 4rem;
+
+    .container{
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .brandWrapper{
+            display: flex;
+            align-items: center;
+            font-size: var(--wp--preset--font-size--2-xl);
+
+            .logo{
+                width: 4rem;
+            }
+            .site_title{
+                margin-left: 1.25rem;
+                width: 4rem;
+
+                a{
+                    color: var(--wp--preset--color--white)
+                }
+            }
+        }
+    }
+}
