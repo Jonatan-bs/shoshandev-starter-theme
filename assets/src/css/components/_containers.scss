@@ -5,7 +5,7 @@
     }
     .container-sm{
         width:calc(100% - 2rem);
-        @apply container lg:max-w-screen-lg; 
+        @apply mx-auto sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg;
     }
     .container-full{
         @apply w-full max-w-full; 

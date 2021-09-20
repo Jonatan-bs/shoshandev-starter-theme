@@ -7,7 +7,7 @@
 function gutenberg_setup(){
     add_theme_support("align-wide");
     add_theme_support( 'editor-styles' );
-	add_editor_style( 'assets/build/gutenberg/main.css' );
+	add_editor_style( get_template_directory_uri() . '/assets/build/gutenberg/main.css' );
 }
 
 add_action( 'after_setup_theme', 'gutenberg_setup' );
@@ -36,7 +36,8 @@ add_filter( 'block_categories_all', 'sst_block_categories', 10, 2 );
 require_once(get_template_directory() . '/blocks/index.php');
 
 /**
- * Add Gutenberg Blocks wrapper
+ * Add div wrapper to Gutenberg Blocks 
+ * For easier width styling
  */
 
 function sst_wrap_alignment( $block_content, $block ) {

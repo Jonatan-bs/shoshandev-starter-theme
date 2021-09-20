@@ -83,14 +83,13 @@ a{
         @apply container-full;
     } 
     .wp-block-separator{
-        margin-bottom: 1.25rem;
+        @apply mb-5;    
     }
     &>*{
-        margin-bottom: 1.25rem;
-        @apply container-sm;
+        @apply container-sm mb-5;
     }   
     .wp-block-group{
-        margin-bottom: 1.25rem;
+        @apply mb-5;    
     }
     
 } 
