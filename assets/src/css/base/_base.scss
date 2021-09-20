@@ -28,6 +28,9 @@ p,a,h1,h2,h3,h4,h5{
     line-height: 1.5;
     font-weight: 400;
 }
+a{
+    color: var(--wp--preset--color--primary)
+}
 
 .title, .editor-post-title__input{
     font-size: var(--wp--preset--font-size--5-xl);
