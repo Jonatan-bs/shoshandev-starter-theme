@@ -2,141 +2,29 @@
 /**
  * Enqueue Styles and Scripts
 */
-
-function enqueue_scripts()  { 
-
-	wp_enqueue_style('style.css', get_stylesheet_directory_uri() . '/assets/build/frontend/main.css');
-    wp_enqueue_script( 'main.js', get_template_directory_uri() . '/assets/build/frontend/main.js', array(), 1.0, true );
-  
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
+include_once(get_stylesheet_directory() . "/includes/styles-and-scripts.php");
 
 /**
- *  Set the maximum allowed width for any content in the theme
-*/
-if ( ! isset( $content_width ) ) $content_width = 900;
-
-
-
-/**
- * Add theme support
+ * Theme Setup
  */
-function shoshandevstartertheme_theme_support() {
-    add_theme_support( 'title-tag' ); 
-
-    /**
-     * Add post thumbnail/featured image support
-    */
-    add_theme_support( 'post-thumbnails' );
-    register_nav_menus( 
-        array(
-            'primary'	=>	__( 'Header', 'shoshandevstartertheme'), // Register the Primary menu
-        )
-    );
-}
-add_action( 'after_setup_theme', 'shoshandevstartertheme_theme_support' );
-
-/**
- * Add logo custom support
-*/
-
-function shoshandevstartertheme_custom_logo_setup() {
-    $defaults = array(
-        'height'               => 100,
-        'width'                => 150,
-        'flex-height'          => false,
-        'flex-width'           => false,
-        'header-text'          => array( 'site-title', 'site-description' ),
-        'unlink-homepage-logo' => false, 
-    );
- 
-    add_theme_support( 'custom-logo', $defaults );
-}
-
-add_action( 'after_setup_theme', 'shoshandevstartertheme_custom_logo_setup' );
+include_once(get_stylesheet_directory() . "/includes/theme.php");
 
 /**
  * Gutenberg Setup
  */
-
-function gutenberg_setup(){
-    add_theme_support("align-wide");
-    add_theme_support( 'editor-styles' );
-	add_editor_style( 'assets/build/gutenberg/main.css' );
-}
-
-add_action( 'after_setup_theme', 'gutenberg_setup' );
-
-/**
- * Add Custom block category
- */
-
-function sst_block_categories( $categories ) {
-    return array_merge(
-        array(
-            array(
-                'slug' => 'sst', // The slug of our new category
-                'title' => __( 'Shoshan Dev', 'shoshandevstartertheme' ), // The name of our new category
-            ),
-        ),
-        $categories
-    );
-}
-
-add_filter( 'block_categories_all', 'sst_block_categories', 10, 2 );
-
-/**
- * Add Gutenberg Blocks
- */
-require_once(get_template_directory() . '/blocks/index.php');
-
-/**
- * Add Gutenberg Blocks wrapper
- */
-
-function sst_wrap_alignment( $block_content, $block ) {
-    
-	if ( isset( $block['attrs']['align'] ) && in_array( $block['attrs']['align'], array( 'wide', 'full' ) ) ) {
-		$block_content = sprintf(
-			'<div class="%1$s">%2$s</div>',
-			'align-wrap align-wrap-' . esc_attr( $block['attrs']['align'] ),
-			$block_content
-		);
-	} elseif (true) {
-        
-    };
-	return $block_content;
-}
-
-add_filter( 'render_block', 'sst_wrap_alignment', 10, 2 );
+include_once(get_stylesheet_directory() . "/includes/gutenberg.php");
 
 /**
  * Add classes on nav links
  */
-function sst_menu_add_class( $attrs, $item, $args ) {
-    if(isset($args->add_anchor_class)) {
-        $attrs['class'] = $args->add_anchor_class;
-    }
-    return $attrs;
-}
-add_filter( 'nav_menu_link_attributes', 'sst_menu_add_class', 10, 3 );
+include_once(get_stylesheet_directory() . "/includes/navigation.php");
 
 /**
- * Remove blocks
- */ 
-function sst_allowed_block_types( $allowed_blocks, $editor_context ) {
- 
- 
-	return $allowed_blocks;
- 
-}
-add_filter( 'allowed_block_types_all', 'sst_allowed_block_types', 10, 2 );
-
-/**
- * excerpt length
+ * excerpt length and [...]
  */
-function mytheme_custom_excerpt_length( $length ) {
-    return 10;
-}
-add_filter( 'excerpt_length', 'mytheme_custom_excerpt_length', 999 );
+include_once( get_stylesheet_directory() . "/includes/excerpt.php");
+
+// Add callback function for load more button
+include_once( get_stylesheet_directory() . "/includes/ajax/load-more-posts.php");
+
 
