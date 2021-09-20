@@ -52,7 +52,7 @@ module.exports = [{
             use: [
               MiniCssExtractPlugin.loader,
               { loader: 'css-loader', options: { importLoaders: 2 } },
-              // { loader: 'postcss-loader' },
+              { loader: 'postcss-loader' },
               { loader: 'sass-loader' },
             ],        
           },

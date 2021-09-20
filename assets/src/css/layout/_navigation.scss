@@ -9,6 +9,8 @@ header {
             display: flex;
         }
         & .menu-item a{
+            @apply text-white;
+
             padding-left: 1rem;
             padding-right: 1rem;
             padding-top: 1.25rem;

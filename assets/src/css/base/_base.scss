@@ -29,7 +29,8 @@ p,a,h1,h2,h3,h4,h5{
     font-weight: 400;
 }
 a{
-    color: var(--wp--preset--color--primary)
+    // color: var(--wp--preset--color--primary)
+    @apply text-primary;
 }
 
 .title, .editor-post-title__input{
@@ -69,24 +70,24 @@ a{
     
         
     &:not(.wide)>*:not(.align-wrap){
-        @include container-sm;
+        @apply container-sm;
     }
     &.wide>*:not(.align-wrap){
-        @include container-wide;
+        @apply container;
     }
     
     &>.align-wrap-wide{
-        @include container-wide;
+        @apply container;
     }
     &>.align-wrap-full{
-        @include container-full;
+        @apply container-full;
     } 
     .wp-block-separator{
         margin-bottom: 1.25rem;
     }
     &>*{
         margin-bottom: 1.25rem;
-        @include container;
+        @apply container-sm;
     }   
     .wp-block-group{
         margin-bottom: 1.25rem;
