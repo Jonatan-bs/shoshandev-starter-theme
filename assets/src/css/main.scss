@@ -1,0 +1,20 @@
+@import "./abstracts/_breakpoints.scss";
+
+@import '../shared/index.scss';
+
+@import "./components/_containers.scss";
+@import "./components/_buttons.scss";
+@import "./components/_grids.scss";
+@import "./components/_posts-grid.scss";
+@import "./components/_post-card.scss";
+
+@import "./base/_normalize.scss";
+
+
+@import './layout/_forms.scss';
+@import './layout/_navigation.scss';
+@import './layout/_header.scss';
+@import './layout/_footer.scss';
+
+@import './base/_base.scss';
+

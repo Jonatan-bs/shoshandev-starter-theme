@@ -1,1 +1,1 @@
-import "./../css/gutenberg/index.scss"
+import "./../css/gutenberg/main.scss"
