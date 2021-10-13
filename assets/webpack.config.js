@@ -1,9 +1,9 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = [{
       entry: '/src/js/main.js',
-
       output: {
         filename: 'main.js',
         path: path.resolve(__dirname, 'build/frontend')
@@ -30,6 +30,10 @@ module.exports = [{
       },
       plugins: [
         new MiniCssExtractPlugin(),
+        new BrowserSyncPlugin({
+          files: "**/*.php",
+          proxy: "http://localhost:8888/wordpress-startertheme/", // your dev server here
+        }),
       ]
 },{
       entry: '/src/js/editor.js',
@@ -61,4 +65,5 @@ module.exports = [{
       plugins: [
         new MiniCssExtractPlugin(),
       ]
-}]
+    },
+]

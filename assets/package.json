@@ -12,6 +12,8 @@
 		"@tailwindcss/aspect-ratio": "^0.2.1",
 		"autoprefixer": "^10.3.4",
 		"babel-loader": "^8.2.2",
+		"browser-sync": "^2.27.5",
+		"browser-sync-webpack-plugin": "^2.3.0",
 		"css-loader": "^6.2.0",
 		"mini-css-extract-plugin": "^2.3.0",
 		"postcss": "^8.3.6",
