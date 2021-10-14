@@ -1,0 +1,22 @@
+.wp-block-separator{
+    border-bottom-width: 1.5px;
+    border-top-width: 0px;
+    @apply py-3 border-grey-2 text-primary m-0;
+
+    .is-style-wide{
+        max-width: 100%;
+    }
+
+}
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots){
+    max-width: 400px !important;
+    width: calc(100% - 6rem) !important;
+}
+.wp-block-separator.is-style-dots:before {
+    content: "···";
+    color: currentColor;
+    font-size: 3.5em;
+    letter-spacing: .3em;
+    padding-left: .4em;
+    font-family: serif;
+}

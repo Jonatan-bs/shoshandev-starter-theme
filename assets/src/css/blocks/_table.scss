@@ -1,0 +1,10 @@
+/**
+* Table
+*/
+.wp-block-table td, .wp-block-table th {
+    border: 1px solid;
+    @apply p-2 text-base;
+}
+.wp-block-table figcaption{
+    @apply text-grey-3 text-center text-sm italic;
+}

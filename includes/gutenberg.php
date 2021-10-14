@@ -55,3 +55,11 @@ function sst_wrap_alignment( $block_content, $block ) {
 }
 
 add_filter( 'render_block', 'sst_wrap_alignment', 10, 2 );
+
+/**
+ * Add fonts to editor
+ */
+function sst_block_styles() {
+    wp_enqueue_style( 'sst-editor-font', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+}
+add_action( 'enqueue_block_editor_assets', 'sst_block_styles' );

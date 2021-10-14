@@ -1,3 +1,6 @@
+/**
+* Make footer stick to bottom if not enough content
+*/
 html{
     font-size: 100%;
 }
@@ -15,6 +18,9 @@ main {
 footer {
     flex-shrink: 0;
 }
+/**
+* END BLOCK
+*/
 
 body{
     font-family: 'Roboto', sans-serif;
@@ -24,12 +30,15 @@ p{
     font-size: var(--wp--preset--font-size--base);
 }
 
-p,a,h1,h2,h3,h4,h5{
+p,a{
     line-height: 1.5;
     font-weight: 400;
 }
+h1,h2,h3,h4,h5{
+    line-height: 1.5;
+    font-weight: bold;
+}
 a{
-    // color: var(--wp--preset--color--primary)
     @apply text-primary;
 }
 
@@ -44,31 +53,12 @@ a{
     }
 }
 
-.wp-block-group,h1,h2,h3,h4,h5,h6{
-    .has-background{
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 1rem;
-        padding-right: 1rem;  
-    }
-}
-
 .gutenberg-content, .wp-site-blocks {
-
-    ul:not(.wp-block-post-template){
-        li{
-            list-style-type: disc;
-            list-style-position: inside;
-        }
-    }
-    ol:not(.wp-block-post-template){
-        li{
-            list-style-type: decimal;
-            list-style-position: inside;
-        }
-    }
     
-        
+    /**
+    *   Containers
+    */
+
     &:not(.wide)>*:not(.align-wrap){
         @apply container-sm;
     }
@@ -94,6 +84,6 @@ a{
     
 } 
 
-.wp-block-gallery>* {
-    width: 100%;
-}
+// .wp-block-gallery>* {
+//     width: 100%;
+// }

@@ -31,7 +31,7 @@ module.exports = [{
       plugins: [
         new MiniCssExtractPlugin(),
         new BrowserSyncPlugin({
-          files: "**/*.php",
+          files: ["**/*.php", "/build/gutenberg/main.css",  "/build/gutenberg/main.js"],
           proxy: "http://localhost:8888/wordpress-startertheme/", // your dev server here
         }),
       ]

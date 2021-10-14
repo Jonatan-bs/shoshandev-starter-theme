@@ -1,31 +1,25 @@
 @import "../abstracts/_breakpoints.scss";
 
-@import "../base/_normalize.scss";
+@import "../components/_containers.scss";
 @import "../base/_base.scss";
 
-@import "../components/_containers.scss";
-@import "../components/_buttons.scss";
+@import '../blocks/_quote.scss';
+@import '../blocks/_list.scss';
+@import '../blocks/_table.scss';
+@import '../blocks/_separator.scss';
+
+// @import "../components/_buttons.scss";
 
 
-
-
-.wp-block{
-    box-sizing: border-box;
-    margin-bottom: 1.25rem;
+a{
+    text-decoration: none;
 }
-
-ul.wp-block-list {
-    li{
-        list-style-type: disc;
-        list-style-position: inside;
-    }
-}
-ol.wp-block-list {
-    li{
-        list-style-type: decimal;
-        list-style-position: inside;
-    }
-}
-li{
+pre{
     line-height: 1.5;
+    @apply text-base;
 }
+
+// .wp-block{
+//     box-sizing: border-box;
+//     margin-bottom: 1.25rem;
+// }
