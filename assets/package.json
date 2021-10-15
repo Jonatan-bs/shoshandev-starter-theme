@@ -29,5 +29,7 @@
 		"webpack": "^5.52.1",
 		"webpack-cli": "^4.8.0"
 	},
-	"dependencies": {}
+	"dependencies": {
+		"@wordpress/blocks": "^11.1.1"
+	}
 }

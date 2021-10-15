@@ -1,0 +1,29 @@
+
+.frontpage_hero{
+    &:before{
+        content: "";
+        z-index: 1;
+        @apply bg-white inset-0 absolute;
+        opacity: .5;
+        @include screen-md{
+            opacity: 0;
+        } 
+    }
+    .wp-block-group{
+        max-width: 600px;
+        h2{
+            font-size: 8vw;    
+
+            @include screen-md{
+                @apply text-5xl;    
+            } 
+        }
+    }
+    position: relative;
+    img{
+        @include screen-sm{
+            object-position: 13% 50% !important;
+        }
+        object-position: 40% 50% !important;
+    }
+}

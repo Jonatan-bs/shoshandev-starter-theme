@@ -1,31 +1,46 @@
 header{
-    background-color: var(--wp--preset--color--primary);
-    color: var(--wp--preset--color--white);
-    margin-bottom: 4rem;
+    // background-color: var(--wp--preset--color--primary);
+    // color: var(--wp--preset--color--white);
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    @apply px-5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 
-    .container{
-        padding-top: 1.25rem;
-        padding-bottom: 1.25rem;
+    // Give all same width
+    &>*{
+        flex: 1;
+    }
+    /* alignment */
+    .primary-nav {
+        text-align: left;
+    }
+    .brandWrapper{
+        text-align: center;
+        justify-content: center;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+    }
+    .secondary-nav{
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
 
-        .brandWrapper{
-            display: flex;
-            align-items: center;
-            font-size: var(--wp--preset--font-size--2-xl);
+    .brandWrapper{
+        font-size: var(--wp--preset--font-size--2-xl);
 
-            .logo{
-                width: 4rem;
-            }
-            .site_title{
-                margin-left: 1.25rem;
-                width: 4rem;
+        .logo{
+            width: 6rem;
+        }
+        .site_title{
+            margin-left: 1.25rem;
+            width: 4rem;
 
-                a{
-                    color: var(--wp--preset--color--white)
-                }
+            a{
+                color: var(--wp--preset--color--white)
             }
         }
     }
+
 }

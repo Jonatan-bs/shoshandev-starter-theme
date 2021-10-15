@@ -1,10 +1,9 @@
 @import "../abstracts/_breakpoints.scss";
-
 @import "./_base.scss";
-
-@import '../blocks/_quote.scss';
-@import '../blocks/_list.scss';
-@import '../blocks/_table.scss';
-@import '../blocks/_separator.scss';
-
+@import "../components/_containers.scss";
+@import "../components/_grids.scss";
+@import "../components/_title.scss";
 @import "../components/_buttons.scss";
+@import "../components/_single_product_card.scss";
+
+@import '../blocks/index.scss';

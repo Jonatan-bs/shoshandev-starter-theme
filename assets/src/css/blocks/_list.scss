@@ -1,20 +1,19 @@
-.gutenberg-content, .wp-site-blocks {
-    /**
-    * Lists
-    */
-    ul:not(.wp-block-post-template){
-        li{
-            list-style-type: disc;
-            list-style-position: inside;
-        }
-    }
-    ol:not(.wp-block-post-template){
-        li{
-            list-style-type: decimal;
-            list-style-position: inside;
-        }
+/**
+* Lists
+*/
+.gutenberg-list>ul{
+    li{
+        list-style-type: disc;
+        list-style-position: inside;
     }
 }
-.wp-block-list li {
+.gutenberg-list>ol{
+    li{
+        list-style-type: decimal;
+        list-style-position: inside;
+    }
+}
+
+.gutenberg-list li {
     line-height: 1.5;
 }

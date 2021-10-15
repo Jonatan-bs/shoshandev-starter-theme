@@ -3,16 +3,18 @@
 */
 
 body{
-    font-family: 'Roboto', sans-serif;
+    @apply text-base;
+    font-family: 'Inter', sans-serif;
 } 
 
 p, a, pre{
+    @apply text-black;
     line-height: 1.5;
-    font-size: var(--wp--preset--font-size--base);
     font-weight: normal;
 }
 
 h1,h2,h3,h4,h5{
+    @apply text-black;
     line-height: 1.5;
     font-weight: bold;
 } 
@@ -39,17 +41,6 @@ main {
 }
 footer {
     flex-shrink: 0;
-}
-
-.title, .editor-post-title__input{
-    font-size: var(--wp--preset--font-size--5-xl);
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-
-    @include screen-md{
-        font-size: var(--wp--preset--font-size--6-xl);
-    }
 }
 
 

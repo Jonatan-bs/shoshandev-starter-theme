@@ -1,0 +1,7 @@
+.wp-block-button>*, .sst_button, input[type="submit"]{
+    @apply button
+
+}
+.sst_button.big, .wp-block-button.is-style-big>*{
+    @apply button-big
+}

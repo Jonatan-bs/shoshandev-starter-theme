@@ -1,0 +1,18 @@
+/**
+*  Set title style
+*/
+.title, .editor-post-title__input{
+    @apply text-black;
+    // font-size: var(--wp--preset--font-size--2-xl);
+    font-size: 7vw;
+    font-weight: 700;
+    &:not(.clean){
+        margin-block-start: 0.67em;
+        margin-block-end: 1em;
+    }
+    line-height: 1;
+
+    @include screen-md{
+        font-size: var(--wp--preset--font-size--6-xl);
+    }
+}

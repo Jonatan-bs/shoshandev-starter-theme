@@ -15,14 +15,14 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 				// If we have a page to show, start a loop that will display it
 				?>
 
-					<article class="post">
+					<div class="page">
 						<div class="container-sm">
-							<h1 class="title"><?php the_title(); // Display the title of the page ?></h1>
+							<h1 class="title text-center"><?php the_title(); // Display the title of the page ?></h1>
 						</div>
 						<?php get_template_part( "template-parts/content", "page") ?>
 						<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
 						
-					</article>
+					</div>
 
 				<?php endwhile; // OK, let's stop the page loop once we've displayed it ?>
 

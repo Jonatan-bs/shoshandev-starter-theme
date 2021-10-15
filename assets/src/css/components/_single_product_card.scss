@@ -1,0 +1,17 @@
+@layer components{
+    .single-product-card{
+        @apply text-center flex flex-col mt-5;
+        .attachment-woocommerce_thumbnail{
+            @apply mb-2 w-full;
+        }
+        .woocommerce-loop-product__title{
+            @apply text-base font-normal my-0 mb-2;
+        }
+        .price{
+            @apply m-0 text-black text-base mb-2 block;
+        }
+        .button{
+            @apply self-center mt-auto uppercase;
+        }
+    }
+}

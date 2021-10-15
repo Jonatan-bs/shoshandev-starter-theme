@@ -1,0 +1,6 @@
+.highlighted-section{
+    min-height: 272px; 
+    @include screen-lg{
+       min-height: 511px; 
+    }
+}

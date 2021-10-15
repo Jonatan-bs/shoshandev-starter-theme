@@ -1,175 +1,224 @@
-header {
-    .header-nav{
+
+.pagination{
+    .prev a, .next a{
+        @apply text-black;
+    }
+    a,span, .prev, .next{
+        @apply flex justify-center items-center text-black;
+    }
+    .numbers{ 
+        a,span, .prev, .next{
+            @apply h-10 w-10;
+        }
+        span.current{
+            @apply bg-primary text-white w-10 h-10;
+        }
+        span.dots{
+            @apply bg-transparent border-0;
+        }
+    }
+}
+
+.footer-nav{
+    @apply gap-12 md:flex md:justify-end md:text-left text-center;
+
+    .title{
+        @apply text-xl;
+    }
+    & .menu-item a{
+        @apply text-black py-2 block;
+    }
+}
+
+.secondary-nav{
+    &>div{
         display: none;
         @include screen-md{
             display: block;
+            @apply flex justify-end;
         }
+    }
+    ul{
+        @apply flex;
 
-        #menu-primary-menu{
-            display: flex;
-        }
         & .menu-item a{
-            @apply text-white;
-
-            padding-left: 1rem;
-            padding-right: 1rem;
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem;
+            @apply text-black px-4 py-5;
         }
-        .menu-item-has-children{
-            position: relative;
+    }
 
-            // Show downarrow if item has subpages
+}
+.primary-nav{
+    &>div{
+        display: none;
+        
+        @include screen-md{
+            display: block;
+        }
+    }
 
-            &>a::after {
+    #menu-primary-menu{
+        display: flex;
+    }
+    & .menu-item a{
+        @apply text-black px-4 py-5;
+    }
+    .menu-item-has-children{
+        position: relative;
+
+        // Show downarrow if item has subpages
+
+        &>a::after {
+            content: "";
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            display: inline-block;
+            padding: 3px;
+            margin-left: 6px;
+            margin-bottom: 1px;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg); 
+        }
+        &:hover{
+            &>ul.sub-menu{
+                display: block;
+            }
+        }
+        &>ul.sub-menu{
+            &::before{
+                content: "";
+                height: 5px;
+                display: block;
+            }
+            display: none;
+            z-index: 50;
+            min-width: 270px;                
+            top: calc(100%);
+            position: absolute;
+            left: 0;
+            & li{
+                background-color: var(--wp--preset--color--grey);
+                & a{
+                    width: 100%;
+                    display: block;
+                    padding-left: 1.25rem;
+                    padding-right: 1.25rem;
+                    color: var(--wp--preset--color--black);
+
+                    &:hover{
+                        background-color: rgba($color: #000000, $alpha: 0.2);
+                    }
+                }
+            }
+        }
+    }
+
+}
+#menu-burger{
+    @include screen-md{
+        display: none;
+    }
+    width: 40px;
+    flex: none;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+#toggle-nav{
+    min-width: 370px;        
+    transition: all .2s;
+    right: 0;
+    transform: translateX(100%);
+    position: fixed;
+    background-color: var(--wp--preset--color--black);
+    top: 0;
+    height: 100%;
+    z-index: 50;
+    padding-top: 8rem;
+
+    & li.menu-item-has-children{
+        &>a>.arrow{
+            width: 60px;
+            height: 100%;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba($color: #fff, $alpha: 0.2);
+
+            &::after{
                 content: "";
                 border: solid #fff;
                 border-width: 0 2px 2px 0;
                 display: inline-block;
                 padding: 3px;
-                margin-left: 6px;
                 margin-bottom: 1px;
                 transform: rotate(45deg);
-                -webkit-transform: rotate(45deg); 
-            }
-            &:hover{
-                &>ul.sub-menu{
-                    display: block;
-                }
-            }
-            &>ul.sub-menu{
-                &::before{
-                    content: "";
-                    height: 5px;
-                    display: block;
-                }
-                display: none;
-                min-width: 270px;                
-                top: calc(100%);
-                position: absolute;
-                right: 1.25rem;
-                & li{
-                    background-color: var(--wp--preset--color--primary);
-                    & a{
-                        width: 100%;
-                        display: block;
-                        padding-left: 1.25rem;
-                        padding-right: 1.25rem;
-
-                        &:hover{
-                            background-color: rgba($color: #000000, $alpha: 0.2);
-                        }
-                    }
-                }
+                transition: all .1s;        
             }
         }
-
-    }
-    #menu-burger{
-        @include screen-md{
-            display: none;
-        }
-        width: 40px;
-        cursor: pointer;
-    }
-    #toggle-nav{
-        min-width: 370px;        
-        transition: all .2s;
-        right: 0;
-        transform: translateX(100%);
-        position: fixed;
-        background-color: var(--wp--preset--color--black);
-        top: 0;
-        height: 100%;
-        z-index: 50;
-        padding-top: 8rem;
-
-        & li.menu-item-has-children{
-            &>a>.arrow{
-                aspect-ratio: 1;
-                height: 100%;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-color: rgba($color: #fff, $alpha: 0.2);
-
-                &::after{
-                    content: "";
-                    border: solid #fff;
-                    border-width: 0 2px 2px 0;
-                    display: inline-block;
-                    padding: 3px;
-                    margin-bottom: 1px;
-                    transform: rotate(45deg);
-                    transition: all .1s;        
-                }
-            }
-            &>a{
-                position: relative;
-                cursor: pointer;
-            }
-            &.active{
-                &>a>.arrow::after{
-                    transform: rotate(225deg);            
-                }
-
-                .sub-menu{
-                    display: block;
-                }
-            }
-            & .sub-menu {
-                display: none;
-                
-                a{
-                    width: 100%;
-                    color: var(--wp--preset--color--white);
-                    display: block;
-                    padding-left: 1.25rem;
-                    padding-right: 1.25rem;
-                    padding-left: 1.75rem;
-                    position: relative;
-                    border-bottom-width: 1px;
-                    background-color: rgba($color: #fff, $alpha: .1); 
-
-                    &:hover{
-                        background-color: var(--wp--preset--color--primary-dark);
-                    }
-                }
-            }
-        }
-        & a{
-            width: 100%;
-            color: var(--wp--preset--color--white);
-            display: block;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-            padding-top: 1.25rem;
-            padding-bottom: 1.25rem;
+        &>a{
             position: relative;
-            border-bottom-width: 1px;
-            border-color: rgba($color: #fff, $alpha: .1);            
-
-            &:hover{
-                background-color: var(--wp--preset--color--primary-dark);
-            }
-        }
-
-        @include screen-md{
-            display: none;
+            cursor: pointer;
         }
         &.active{
-            transform: translateX(0%);
+            &>a>.arrow::after{
+                transform: rotate(225deg);            
+            }
+
+            .sub-menu{
+                display: block;
+            }
+        }
+        & .sub-menu {
+            display: none;
             
+            a{
+                width: 100%;
+                color: var(--wp--preset--color--white);
+                display: block;
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+                padding-left: 1.75rem;
+                position: relative;
+                border-bottom-width: 1px;
+                background-color: rgba($color: #fff, $alpha: .1); 
+
+                &:hover{
+                    background-color: var(--wp--preset--color--primary-dark);
+                }
+            }
         }
-        #menu-close{
-            width: 20px;
-            cursor: pointer;
-            position: absolute;
-            top: 60px;
-            right: 40px;
+    }
+    & a{
+        width: 100%;
+        color: var(--wp--preset--color--white);
+        display: block;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+        position: relative;
+        border-bottom-width: 1px;
+        border-color: rgba($color: #fff, $alpha: .1);            
+
+        &:hover{
+            background-color: var(--wp--preset--color--primary-dark);
         }
+    }
+
+    @include screen-md{
+        display: none;
+    }
+    &.active{
+        transform: translateX(0%);
+        
+    }
+    #menu-close{
+        width: 20px;
+        cursor: pointer;
+        position: absolute;
+        top: 60px;
+        right: 40px;
     }
 }

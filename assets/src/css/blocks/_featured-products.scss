@@ -1,0 +1,3 @@
+.wp-block-sst-featured-products:not(.block-editor-block-list__block){
+    @apply grid md:grid-cols-3 grid-cols-1 gap-5;
+}
