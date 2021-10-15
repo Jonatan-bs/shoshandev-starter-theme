@@ -1,0 +1,62 @@
+
+/**
+* OBS. if you're making changes remember to update ../base/_base.scss to match styling in editor
+*/
+a{
+    text-decoration: none;
+}
+p, a, pre{
+    line-height: 1.5;
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: normal;
+}
+
+
+a{
+    @apply no-underline;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,h2,h3,h4,h5{
+    line-height: 1.5;
+    font-weight: bold;
+} 
+
+
+/**
+* Align images and wrap text around without breaking words
+*/
+
+.wp-block[data-align="right"]{
+    float: none !important;
+    &>.wp-block-image{
+        float: right;
+    }
+}
+.wp-block[data-align="left"]{
+    float: none !important;
+    &>.wp-block-image{
+        float: left;
+    }
+}
+
+p{
+    overflow-wrap:normal !important;
+}
+
+/**
+*  Set title style
+*/
+.title, .editor-post-title__input{
+    font-size: var(--wp--preset--font-size--5-xl);
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1;
+
+    @include screen-md{
+        font-size: var(--wp--preset--font-size--6-xl);
+    }
+}

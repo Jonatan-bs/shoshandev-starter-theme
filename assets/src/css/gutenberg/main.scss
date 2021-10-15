@@ -1,6 +1,6 @@
 @import "../abstracts/_breakpoints.scss";
 
-@import "../base/_base.scss";
+@import "./_base.scss";
 
 @import '../blocks/_quote.scss';
 @import '../blocks/_list.scss';
@@ -8,35 +8,3 @@
 @import '../blocks/_separator.scss';
 
 @import "../components/_buttons.scss";
-
-.wp-block[data-align="right"]{
-    float: none !important;
-    &>.wp-block-image{
-        float: right;
-    }
-}
-.wp-block[data-align="left"]{
-    float: none !important;
-    &>.wp-block-image{
-        float: left;
-    }
-}
-/**
-* Don't break inside words
-*/
-p{
-    overflow-wrap:normal !important;
-}
-
-a{
-    text-decoration: none;
-}
-pre{
-    line-height: 1.5;
-    @apply text-base;
-}
-
-// .wp-block{
-//     box-sizing: border-box;
-//     margin-bottom: 1.25rem;
-// }

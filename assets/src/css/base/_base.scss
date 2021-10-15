@@ -1,4 +1,26 @@
 /**
+* OBS. if you're making changes remember to update ../gutenberg/_base.scss to match styling in editor
+*/
+
+body{
+    font-family: 'Roboto', sans-serif;
+} 
+
+p, a, pre{
+    line-height: 1.5;
+    font-size: var(--wp--preset--font-size--base);
+    font-weight: normal;
+}
+
+h1,h2,h3,h4,h5{
+    line-height: 1.5;
+    font-weight: bold;
+} 
+a{
+    @apply text-primary no-underline;
+}
+
+/**
 * Make footer stick to bottom if not enough content
 */
 html{
@@ -18,29 +40,6 @@ main {
 footer {
     flex-shrink: 0;
 }
-/**
-* END BLOCK
-*/
-
-body{
-    font-family: 'Roboto', sans-serif;
-}
-
-p{
-    font-size: var(--wp--preset--font-size--base);
-}
-
-p,a{
-    line-height: 1.5;
-    font-weight: 400;
-}
-h1,h2,h3,h4,h5{
-    line-height: 1.5;
-    font-weight: bold;
-}
-a{
-    @apply text-primary;
-}
 
 .title, .editor-post-title__input{
     font-size: var(--wp--preset--font-size--5-xl);
@@ -54,6 +53,35 @@ a{
 }
 
 
+/**
+*   Match gutenberg containers frontend
+*/
+.gutenberg-content, .wp-site-blocks {
+
+    &:not(.wide)>*:not(.align-wrap){
+        @apply container-sm;
+    }
+    &.wide>*:not(.align-wrap){
+        @apply container;
+    }
+    
+    &>.align-wrap-wide{
+        @apply container;
+    }
+    &>.align-wrap-full{
+        @apply container-full;
+    } 
+    .wp-block-separator{
+        @apply mb-5;    
+    }
+    &>*{
+        @apply mb-5;
+    }   
+    .wp-block-group{
+        @apply mb-5;    
+    }
+    
+} 
 
 // .wp-block-gallery>* {
 //     width: 100%;
