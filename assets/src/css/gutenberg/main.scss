@@ -1,6 +1,5 @@
 @import "../abstracts/_breakpoints.scss";
 
-@import "../components/_containers.scss";
 @import "../base/_base.scss";
 
 @import '../blocks/_quote.scss';
@@ -8,8 +7,26 @@
 @import '../blocks/_table.scss';
 @import '../blocks/_separator.scss';
 
-// @import "../components/_buttons.scss";
+@import "../components/_buttons.scss";
 
+.wp-block[data-align="right"]{
+    float: none !important;
+    &>.wp-block-image{
+        float: right;
+    }
+}
+.wp-block[data-align="left"]{
+    float: none !important;
+    &>.wp-block-image{
+        float: left;
+    }
+}
+/**
+* Don't break inside words
+*/
+p{
+    overflow-wrap:normal !important;
+}
 
 a{
     text-decoration: none;

@@ -1,0 +1,30 @@
+.gutenberg-content, .wp-site-blocks {
+    
+    /**
+    *   Containers
+    */
+
+    &:not(.wide)>*:not(.align-wrap){
+        @apply container-sm;
+    }
+    &.wide>*:not(.align-wrap){
+        @apply container;
+    }
+    
+    &>.align-wrap-wide{
+        @apply container;
+    }
+    &>.align-wrap-full{
+        @apply container-full;
+    } 
+    .wp-block-separator{
+        @apply mb-5;    
+    }
+    &>*{
+        @apply mb-5;
+    }   
+    .wp-block-group{
+        @apply mb-5;    
+    }
+    
+} 
