@@ -36,7 +36,7 @@ module.exports = [{
         }),
       ]
 },{
-      entry: '/src/js/editor.js',
+      entry: '/src/js/gutenberg.js',
 
       output: {
         filename: 'main.js',

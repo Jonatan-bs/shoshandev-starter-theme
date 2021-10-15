@@ -14,7 +14,7 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      'sans': ['Roboto', 'sans-serif'],
+      'sans': ['Inter', 'sans-serif'],
     },
     // Match theme.json
     fontSize: {
@@ -38,6 +38,7 @@ module.exports = {
     extend: {
       // Match theme.json
       colors: {
+        "black": "var(--wp--preset--color--black)",
         "primary": "var(--wp--preset--color--primary)",
         "primary-dark": "var(--wp--preset--color--primary-dark)",
         "secondary": "var(--wp--preset--color--secondary)",

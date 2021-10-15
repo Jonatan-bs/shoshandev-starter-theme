@@ -4,15 +4,19 @@
 @import './base/_base.scss';
 
 @import "./components/_containers.scss";
+@import "./components/_grids.scss";
+@import "./components/_comments.scss";
+@import "./components/_title.scss";
+@import "./components/_search_form.scss";
 @import "./components/_buttons.scss";
+@import "./components/_single_product_card.scss";
+
+@import "./woocommerce/index.scss";
 
 @import './layout/_forms.scss';
 @import './layout/_navigation.scss';
 @import './layout/_header.scss';
 @import './layout/_footer.scss';
 
-@import './blocks/_quote.scss';
-@import './blocks/_list.scss';
-@import './blocks/_table.scss';
-@import './blocks/_separator.scss';
+@import './blocks/index.scss';
 

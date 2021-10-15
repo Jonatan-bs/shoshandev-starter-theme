@@ -6,8 +6,8 @@ a{
     text-decoration: none;
 }
 p, a, pre{
-    line-height: 1.5;
-    font-size: var(--wp--preset--font-size--base);
+    @apply text-black;
+    line-height: inherit;
     font-weight: normal;
 }
 
@@ -17,10 +17,12 @@ a{
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    @apply text-base;
+    font-family: 'Inter', sans-serif;
 }
 
 h1,h2,h3,h4,h5{
+    @apply text-black;
     line-height: 1.5;
     font-weight: bold;
 } 
@@ -45,18 +47,4 @@ h1,h2,h3,h4,h5{
 
 p{
     overflow-wrap:normal !important;
-}
-
-/**
-*  Set title style
-*/
-.title, .editor-post-title__input{
-    font-size: var(--wp--preset--font-size--5-xl);
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1;
-
-    @include screen-md{
-        font-size: var(--wp--preset--font-size--6-xl);
-    }
 }

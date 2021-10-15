@@ -1,0 +1,19 @@
+{
+	"apiVersion": 2,
+	"name": "sst/featured-products",
+	"version": "0.1.0",
+	"title": "Featured Products",
+	"category": "sst",
+	"description": "Example block written with ESNext standard and JSX support – build step required.",
+	"supports": {
+		"html": false,
+		"align": ["wide"]
+	},
+	"textdomain": "sst-featured-products",
+	"attributes": {
+		"buttonText": {
+			"type": "string",
+			"default": "ADD TO CART"	
+		}
+	}
+}

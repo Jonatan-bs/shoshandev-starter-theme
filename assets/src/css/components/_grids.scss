@@ -1,0 +1,3 @@
+.grid-3:not(.grid-3.wp-block-query), .grid-3.wp-block-query ul{
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-5;
+}

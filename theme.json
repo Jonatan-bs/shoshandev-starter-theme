@@ -1,6 +1,13 @@
 {
     "version": 1,
     "settings": {
+		"blocks": {
+			"core/button": {
+				"border": {
+					"radius": 2
+				}
+			}
+		},
 		"layout": {
 			"contentSize": "976px",
 			"wideSize": "1300px"
@@ -50,7 +57,7 @@
 				},
 				{
 					"slug": "black",
-					"color": "#000",
+					"color": "#212121",
 					"name": "black"
 				},
 				{

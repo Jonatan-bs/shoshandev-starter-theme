@@ -1,0 +1,8 @@
+.searchform{
+    &>div{
+        @apply flex;
+    }
+    & input[type=text]{
+        margin: 0;
+    }
+}

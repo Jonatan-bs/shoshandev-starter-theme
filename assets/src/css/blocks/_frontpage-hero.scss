@@ -1,0 +1,19 @@
+
+.frontpage_hero{
+    .wp-block-group{
+        max-width: 600px;
+        @apply text-3xl;
+        h2{
+            @include screen-md{
+                @apply text-5xl;    
+            } 
+        }
+    }
+    position: relative;
+    img{
+        @include screen-lg{
+            object-position: 100% 61% !important;    
+        }
+        object-position: 0% 61% !important;
+    }
+}

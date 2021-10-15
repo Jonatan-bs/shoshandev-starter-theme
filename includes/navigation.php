@@ -1,4 +1,15 @@
 <?php
+function sst_add_navs() {
+    register_nav_menus( 
+        array(
+            'primary'	=>	__( 'Header left', 'shoshandevstartertheme'), // Register the Primary menu
+            'secondary'	=>	__( 'Header right', 'shoshandevstartertheme'), // Register the Primary menu
+            'footer-quick-links'	=>	__( 'Footer - Quick Links', 'shoshandevstartertheme'), // Register the Primary menu
+            'footer-about'	=>	__( 'Footer - About', 'shoshandevstartertheme'), // Register the Primary menu
+        )
+    );
+}
+add_action( 'after_setup_theme', 'sst_add_navs' );
 
 /**
  * Add classes on nav links

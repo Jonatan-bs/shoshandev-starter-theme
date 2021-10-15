@@ -1,0 +1,11 @@
+// Add contaier to inner content
+.wp-block-cover__inner-container{
+    @apply container;
+}
+// Add default height
+.wp-block-cover{
+    min-height: 324px; 
+    @include screen-md{
+       min-height: 756px; 
+    }
+}
