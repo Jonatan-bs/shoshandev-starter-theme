@@ -17,4 +17,4 @@ jobs:
         server: ftp.jonatanshoshan.com
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
-        server-dir: ./wordpress-test/wp-content/themes/shoshandev-starter-theme/
+        server-dir: ./wordpress-starter/wp-content/themes/shoshandev-starter-theme/
