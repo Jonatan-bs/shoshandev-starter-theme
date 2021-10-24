@@ -53,7 +53,7 @@ module.exports = {
   },
   variants: {},
   plugins: [
-    require('@tailwindcss/aspect-ratio')
+    require('@tailwindcss/forms')
   ],
   corePlugins: {
     // added container in /src/shared/tw-components.scss
