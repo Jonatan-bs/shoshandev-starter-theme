@@ -50,7 +50,7 @@
 
 	<nav id="toggle-nav">
 		<img id="menu-close" src="<?= get_template_directory_uri()?>/assets/src/img/close.svg"/>
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'link_after' => '<div class="arrow"></div>'  ) ); // Display the user-defined menu in Appearance > Menus ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'primary-mobile', 'link_after' => '<div class="arrow"></div>'  ) ); // Display the user-defined menu in Appearance > Menus ?>
 	</nav>
 </header><!-- #masthead .site-header -->
 

@@ -3,6 +3,7 @@ function sst_add_navs() {
     register_nav_menus( 
         array(
             'primary'	=>	__( 'Header left', 'shoshandevstartertheme'), // Register the Primary menu
+            'primary-mobile'	=>	__( 'Mobile', 'shoshandevstartertheme'), // Register the Primary menu
             'secondary'	=>	__( 'Header right', 'shoshandevstartertheme'), // Register the Primary menu
             'footer-quick-links'	=>	__( 'Footer - Quick Links', 'shoshandevstartertheme'), // Register the Primary menu
             'footer-about'	=>	__( 'Footer - About', 'shoshandevstartertheme'), // Register the Primary menu
