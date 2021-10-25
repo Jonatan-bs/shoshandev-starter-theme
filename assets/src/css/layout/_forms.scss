@@ -1,5 +1,5 @@
 input:not([type=submit]), textarea{
-    @apply border-grey-2 border;
+    @apply border-grey-2 border rounded-none;
     font-size: var(--wp--preset--font-size--base);
     width: 100%;
     padding-top: 0.5rem;

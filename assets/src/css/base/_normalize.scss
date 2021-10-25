@@ -2,6 +2,16 @@
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
+/**
+* Clean forms
+*/ 
+input, textarea{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+
 /*
 Document
 ========
