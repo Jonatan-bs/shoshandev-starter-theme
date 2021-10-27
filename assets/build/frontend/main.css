@@ -164307,15 +164307,19 @@ label {
 
 #toggle-nav {
   min-width: 370px;
-  transition: all 0.2s;
-  right: 0;
+  transition: transform 0.4s;
   transform: translateX(100%);
+  right: 0;
   position: fixed;
   background-color: var(--wp--preset--color--black);
   top: 0;
   height: 100%;
   z-index: 50;
   padding-top: 8rem;
+}
+
+#toggle-nav.active {
+  transform: translateX(0%);
 }
 
 #toggle-nav li.menu-item-has-children > a > .arrow {
@@ -164395,10 +164399,6 @@ label {
   #toggle-nav {
     display: none;
   }
-}
-
-#toggle-nav.active {
-  transform: translateX(0%);
 }
 
 #toggle-nav #menu-close {

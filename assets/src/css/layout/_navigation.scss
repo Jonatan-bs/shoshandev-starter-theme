@@ -122,14 +122,23 @@
     justify-content: flex-end;
     cursor: pointer;
 }
+
 #toggle-nav{
-    min-width: 370px;        
-    -webkit-transition: all .2s;
-    -moz-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-    right: 0;
+    min-width: 370px;    
+    
+    -webkit-transition: transform .4s;
+    -moz-transition: transform .4s;
+    -ms-transition: transform .4s;
+    -o-transition: transform .4s;
+    transition: transform .4s;
+
     transform: translateX(100%);
+    
+    &.active{
+        transform: translateX(0%);  
+    }
+
+    right: 0;
     position: fixed;
     background-color: var(--wp--preset--color--black);
     top: 0;
@@ -216,10 +225,6 @@
 
     @include screen-md{
         display: none;
-    }
-    &.active{
-        transform: translateX(0%);
-        
     }
     #menu-close{
         width: 60px;
