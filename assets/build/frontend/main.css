@@ -285,10 +285,14 @@
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
-input,textarea{
+input:not([type=checkbox]),textarea,select{
   -webkit-appearance:none;
   -moz-appearance:none;
   appearance:none
+}
+
+input:not([type=checkbox]):focus,textarea:focus,select:focus{
+  outline:none
 }
 
 *,::before,::after{
@@ -1480,25 +1484,71 @@ footer{
   grid-column:1
 }
 
-input:not([type=submit]), textarea{
+input:not([type=submit]):not([type=checkbox]), textarea, .select2-selection--single, select{
+  margin-bottom:1.25rem;
+  width:100%;
   border-radius:0px;
   border-width:1px;
   border-color:var(--wp--preset--color--grey-2)
 }
 
-input:not([type=submit]),textarea{
+input:not([type=submit]):not([type=checkbox]):focus, textarea:focus, .select2-selection--single:focus, select:focus{
+  border-color:var(--wp--preset--color--primary)
+}
+
+input:not([type=submit]):not([type=checkbox]), textarea, .select2-selection--single, select{
+  padding-left:0.75rem;
+  padding-right:0.75rem;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
   font-size:var(--wp--preset--font-size--base);
-  width:100%;
-  padding-top:.5rem;
-  padding-bottom:.5rem;
-  padding-left:.75rem;
-  padding-right:.75rem;
-  margin-bottom:1.25rem
+  --tw-ring-color:var(--wp--preset--color--primary)
 }
 
 label{
   font-size:var(--wp--preset--font-size--base);
   color:var(--wp--preset--color--grey-3)
+}
+
+.select2-container--default{
+  margin-bottom:1.25rem
+}
+
+.select2-container--default .select2-selection--single{
+  height:auto;
+  width:100%;
+  border-radius:0px;
+  border-width:1px;
+  border-color:var(--wp--preset--color--grey-2)
+}
+
+.select2-container--default .select2-selection--single:focus{
+  border-color:var(--wp--preset--color--primary)
+}
+
+.select2-container--default .select2-selection--single{
+  padding-left:0.75rem;
+  padding-right:0.75rem;
+  padding-top:0.5rem;
+  padding-bottom:0.5rem;
+  font-size:var(--wp--preset--font-size--base);
+  --tw-ring-color:var(--wp--preset--color--primary)
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+  top:50%;
+  transform:translateY(-50%)
+}
+
+.select2-container--default .select2-search__field{
+  margin-bottom:0px !important
+}
+
+.select2-container--default .select2-dropdown{
+  border-right-width:1px;
+  border-bottom-width:1px;
+  border-left-width:1px;
+  border-color:var(--wp--preset--color--grey-2)
 }
 
 .pagination .prev a, .pagination .next a{

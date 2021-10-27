@@ -5,10 +5,14 @@
 /**
 * Clean forms
 */ 
-input, textarea{
+input:not([type=checkbox]), textarea, select{
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+
+  &:focus{
+    outline: none;
+  }
 }
 
 

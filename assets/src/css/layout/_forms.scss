@@ -1,14 +1,26 @@
-input:not([type=submit]), textarea{
-    @apply border-grey-2 border rounded-none;
-    font-size: var(--wp--preset--font-size--base);
-    width: 100%;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    margin-bottom: 1.25rem;
+input:not([type=submit]):not([type=checkbox]), textarea, .select2-selection--single, select{
+    @apply border-grey-2 border rounded-none py-2 px-3 mb-5 w-full text-base focus:border-primary ring-primary ;
 }
 label{
     font-size: var(--wp--preset--font-size--base);
     color: var(--wp--preset--color--grey-3);
+}
+
+// Woocommerce select fields style
+.select2-container--default {
+    .select2-selection--single {
+        .select2-selection__arrow{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @apply border-grey-2 border rounded-none py-2 px-3 h-auto w-full text-base focus:border-primary ring-primary;
+
+    }
+    .select2-search__field{
+        @apply mb-0 #{!important};
+    }
+    .select2-dropdown{
+        @apply border-grey-2 border-b border-l border-r;
+    }
+    @apply mb-5;
 }
