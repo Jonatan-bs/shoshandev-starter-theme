@@ -451,6 +451,7 @@ p{
 }
 
 .single-product-card{
+  position:relative;
   margin-top:1.25rem;
   display:flex;
   flex-direction:column;
@@ -482,6 +483,13 @@ p{
   margin-top:auto;
   align-self:center;
   text-transform:uppercase
+}
+
+.single-product-card .added_to_cart.wc-forward{
+  position:absolute;
+  top:100%;
+  left:50%;
+  transform:translate(-50%, 5px)
 }
 
 .wp-embed-aspect-16-9 .wp-block-embed__wrapper{
@@ -650,7 +658,7 @@ blockquote.wp-block-quote cite{
   overflow-wrap:break-word
 }
 
-.single-product-card-component .wp-block-button>*, .single-product-card-component .sst_button, .single-product-card-component input[type=submit]{
+.single-product-card .wp-block-button>*, .single-product-card .sst_button, .single-product-card input[type=submit]{
   margin-top:auto;
   align-self:center;
   text-transform:uppercase

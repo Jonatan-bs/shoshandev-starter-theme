@@ -124,7 +124,8 @@
 }
 
 #toggle-nav{
-    min-width: 370px;    
+    max-width: 370px;    
+    width: 100%;
     
     -webkit-transition: transform .4s;
     -moz-transition: transform .4s;

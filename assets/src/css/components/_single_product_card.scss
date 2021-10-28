@@ -1,20 +1,19 @@
-@layer components{
-    .single-product-card-component{
-        @apply text-center flex flex-col mt-5;
-        .attachment-woocommerce_thumbnail{
-            @apply mb-2 w-full;
-        }
-        .woocommerce-loop-product__title{
-            @apply text-base font-normal my-0 mb-2;
-        }
-        .price{
-            @apply m-0 text-black text-base mb-2 block;
-        }
-        .button{
-            @apply self-center mt-auto uppercase;
-        }
-    }
-}
 .single-product-card{
-    @apply single-product-card-component
+    @apply text-center flex flex-col mt-5 relative;
+    .attachment-woocommerce_thumbnail{
+        @apply mb-2 w-full;
+    }
+    .woocommerce-loop-product__title{
+        @apply text-base font-normal my-0 mb-2;
+    }
+    .price{
+        @apply m-0 text-black text-base mb-2 block;
+    }
+    .button{
+        @apply self-center mt-auto uppercase;
+    }
+    .added_to_cart.wc-forward{
+        @apply absolute top-full left-1/2;
+        transform: translate(-50%, 5px); 
+    }
 }

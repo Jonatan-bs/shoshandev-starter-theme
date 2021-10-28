@@ -127,21 +127,31 @@
 /**
 * /shop page
 */ 
-.products{ 
-    &.columns-1{
-        @apply grid grid-cols-1 gap-5;
+.woocommerce-shop{
+    .woocommerce-result-count{
+        @apply md:float-left 
     }
-    &.columns-2{
-        @apply grid md:grid-cols-2 grid-cols-1 gap-5;
+    .woocommerce-ordering{
+        @apply md:float-right; 
+        max-width: 260px;
     }
-    &.columns-3{
-        @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5;
-    }
-    &.columns-4{
-        @apply grid md:grid-cols-4 grid-cols-2 gap-5;
+
+    .products{ 
+        @apply w-full;
+        &.columns-1{
+            @apply grid grid-cols-1 gap-5;
+        }
+        &.columns-2{
+            @apply grid md:grid-cols-2 grid-cols-1 gap-5;
+        }
+        &.columns-3{
+            @apply grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5;
+        }
+        &.columns-4{
+            @apply grid md:grid-cols-4 grid-cols-2 gap-5;
+        }
     }
 }
-
 /**
 * /account page
 */ 
